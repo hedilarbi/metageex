@@ -1,0 +1,43 @@
+.container{
+    width: 33%;
+    height: 330px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+  
+    padding-top: 12px;
+    box-shadow: 8px 9px 32px rgba(0, 0, 0, 0.25);
+   
+   
+}
+
+.wideContainer{
+    width: 50%;
+    height: 330px;
+    
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+  
+    padding: 0 36px ;
+    box-shadow: 8px 9px 32px rgba(0, 0, 0, 0.25);
+    display: flex;
+    place-items: center;
+
+}
+
+
+
+
+.shadowCircle{
+    background-color: rgba(107, 193, 255, 1);
+    width: 110px;
+    height: 110px;
+    border-radius: 100%;
+    filter: blur(20px);
+    position: absolute;
+    
+    top: 25px;
+    left: -5px;
+    z-index: -1;
+}
