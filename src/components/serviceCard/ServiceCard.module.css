@@ -1,32 +1,101 @@
 .container{
-    width: 33%;
-    height: 330px;
+    width: 100%;
+    height: 430px;
     background-color: rgba(255, 255, 255, 0.03);
     border-radius: 16px;
     backdrop-filter: blur(10px);
   
     padding-top: 12px;
     box-shadow: 8px 9px 32px rgba(0, 0, 0, 0.25);
+    position: relative;
    
    
 }
 
+.container::after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    background: radial-gradient(circle, rgb(107, 193, 255) 0%, rgba(9, 148, 248, 0.6) 100%);
+    border-radius: inherit; /* Match the border-radius of the container */
+    padding: 2px; /* Adjust this value to match the border width */
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude; /* For browsers that support mask-composite */
+    -webkit-mask-composite: destination-out; /* For WebKit browsers */
+   
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 16px;
+    z-index: 10;
+    border-left: 2px solid rgba(0, 0, 0, 0.8);
+    border-right: 2px solid rgba(0, 0, 0, 0.8);
+}
+
 .wideContainer{
-    width: 50%;
-    height: 330px;
-    
+    width: 100%;
+    height: 430px;
     background-color: rgba(255, 255, 255, 0.03);
     border-radius: 16px;
     backdrop-filter: blur(10px);
   
-    padding: 0 36px ;
+    padding-top: 12px;
     box-shadow: 8px 9px 32px rgba(0, 0, 0, 0.25);
-    display: flex;
-    place-items: center;
+    position: relative;
 
 }
 
+.wideContainer::after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    background: radial-gradient(circle, rgb(107, 193, 255) 0%, rgba(9, 148, 248, 0.6) 100%);
+    border-radius: inherit; /* Match the border-radius of the container */
+    padding: 2px; /* Adjust this value to match the border width */
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude; /* For browsers that support mask-composite */
+    -webkit-mask-composite: destination-out; /* For WebKit browsers */
+   
+}
 
+.wideContainer::before{
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 16px;
+    z-index: 10;
+    border-left: 2px solid rgba(0, 0, 0, 0.8);
+    border-right: 2px solid rgba(0, 0, 0, 0.8);
+}
 
 
 .shadowCircle{
@@ -40,4 +109,25 @@
     top: 25px;
     left: -5px;
     z-index: -1;
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .container{
+        width: 33%;
+    }
+    .wideContainer{
+        width: 50%;
+        
+        height: 430px;
+        
+        background-color: rgba(255, 255, 255, 0.03);
+        border-radius: 16px;
+        backdrop-filter: blur(10px);
+      
+        padding: 0 36px ;
+        box-shadow: 8px 9px 32px rgba(0, 0, 0, 0.25);
+        display: flex;
+        place-items: center;
+    }
 }

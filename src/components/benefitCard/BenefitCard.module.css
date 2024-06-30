@@ -1,0 +1,92 @@
+.container{
+    width: 100%;
+    height: 65vh;
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+   
+    color: white;
+    
+    box-shadow: 8px 9px 32px rgba(0, 0, 0, 0.25);
+    position: relative;
+  
+   padding: 36px 24px 0px 24px;
+
+   display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.container::after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    background: linear-gradient(to bottom, rgb(107, 193, 255) 0%, rgba(9, 148, 248, 0.3) 100%);
+    border-radius: inherit; /* Match the border-radius of the container */
+    padding: 2px; /* Adjust this value to match the border width */
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude; /* For browsers that support mask-composite */
+    -webkit-mask-composite: destination-out; /* For WebKit browsers */
+   
+}
+
+.containerReverse{
+    width: 100%;
+    height: 65vh;
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+   
+    color: white;
+    
+    box-shadow: 8px 9px 32px rgba(0, 0, 0, 0.25);
+    position: relative;
+  
+   padding: 36px 24px 0px 24px;
+
+   display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.containerReverse::after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    background: linear-gradient(to top, rgb(107, 193, 255) 0%, rgba(9, 148, 248, 0.3) 100%);
+    border-radius: inherit; /* Match the border-radius of the container */
+    padding: 2px; /* Adjust this value to match the border width */
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude; /* For browsers that support mask-composite */
+    -webkit-mask-composite: destination-out; /* For WebKit browsers */
+   
+}
+
+@media only screen and (min-width: 1024px) {
+    .container{
+        width: 25%;
+        height: 80vh;
+        padding: 28px 12px 0px 12px;
+    }
+    .containerReverse{
+        width: 25%;
+        height: 80vh;
+        padding: 28px 12px 0px 12px;
+    }
+}
