@@ -2,7 +2,6 @@ import Image from "next/image";
 import React from "react";
 import contactHero from "../../../public/images/contactHero.svg";
 import aboutImage from "../../../public/images/aboutImage.svg";
-import BenefitCard from "@/components/benefitCard/BenefitCard";
 import value1 from "../../../public/images/value1.svg";
 import value2 from "../../../public/images/value2.svg";
 import value3 from "../../../public/images/value3.svg";
@@ -57,7 +56,7 @@ const page = () => {
               Nos Valeurs Fondamentales
               <div className="titleUnderline" />
             </h2>
-            <div className=" flex w-full gap-6 lg:flex-row flex-col  flex-1  lg:justify-between lg:mt-20 mt-10">
+            <div className=" flex w-full gap-10 lg:gap-6 lg:flex-row flex-col  flex-1  lg:justify-between lg:mt-20 mt-10">
               <ValueCard
                 icon={value1}
                 title="Innovation"

@@ -53,7 +53,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full h-[410vh] lg:h-[200vh] relative lg:mt-16">
+      <section className="w-full h-[410vh] lg:h-[180vh] relative lg:mt-16">
         <div className="hero2">
           <Image src={hero2} alt="hero 2" className="object-contain" />
         </div>
@@ -110,7 +110,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full lg:h-[200vh] md:h-[250vh] h-[150vh] relative   ">
+      <section className="w-full lg:h-[180vh] md:h-[250vh] h-[150vh] relative   ">
         <div className="z-20 absolute left-0 top-0 w-full h-full">
           <div className="w-full flex flex-col items-center h-full mt-4">
             <h2 className="text-white font-inter font-semibold lg:text-5xl text-xl text-center leading-tight ">
@@ -209,7 +209,7 @@ export default function Home() {
               />
 
               <p className="text-white lg:text-xl text-sm leading-loose font-normal ">
-                <span className="text-pr font-semibold lg:text-3xl text-base">
+                <span className="text-pr font-semibold lg:text-2xl text-base">
                   Chez METAGEEX
                 </span>
                 , nous croyons fermement que la digitalisation est la clé pour

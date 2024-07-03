@@ -36,7 +36,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="w-full lg:h-[100vh] xl:h-[80vh] h-[120vh] relative  ">
+      <section className="w-full lg:h-[100vh] xl:h-[60vh] h-[110vh] relative  ">
         <div className="serviceBlueHalfElipse" />
         <div className="absolute z-20 w-full h-full flex flex-col items-center">
           <div className="flex lg:flex-row flex-col-reverse items-center lg:px-24 w-full px-6 lg:gap-20">
@@ -67,7 +67,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="w-full lg:h-screen xl:h-[80vh] h-[130vh] relative  ">
+      <section className="w-full lg:h-screen xl:h-[60vh] h-[120vh] relative  ">
         <div className="absolute z-20 w-full h-full flex flex-col items-center">
           <div className="flex lg:flex-row flex-col items-center lg:px-24 w-full px-6 lg:gap-20">
             <Image
@@ -97,7 +97,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="w-full lg:h-screen xl:h-[80vh] h-[130vh] relative  ">
+      <section className="w-full lg:h-screen xl:h-[60vh] h-[120vh] relative  ">
         <div className="serviceBlueHalfElipse2" />
         <div className="absolute z-20 w-full h-full flex flex-col items-center">
           <div className="flex lg:flex-row flex-col-reverse items-center lg:px-24 w-full px-6 lg:gap-20">
@@ -128,13 +128,13 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="w-full lg:h-screen xl:h-[80vh] h-[130vh] relative  ">
+      <section className="w-full lg:h-screen xl:h-[60vh] h-[120vh] relative  ">
         <div className="absolute z-20 w-full h-full flex flex-col items-center">
-          <div className="flex lg:flex-row flex-col items-center lg:px-24 w-full px-6 lg:gap-20">
+          <div className="flex lg:flex-row flex-col items-center lg:px-24 w-full px-6 lg:gap-20 ">
             <Image
               src={servicesEcommerce}
               alt="web dev"
-              className="w-40 h-44 lg:flex-1 lg:h-80"
+              className="w-40 h-44 lg:flex-1 lg:h-80 object-contain"
             />
             <div className="lg:w-3/5 w-full">
               <h2 className="font-inter text-white font-semibold lg:text-4xl text-xl text-center lg:text-left mt-4 lg:mt-0">
@@ -158,12 +158,12 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="w-full h-[140vh] xl:h-[80vh] lg:h-screen  relative  ">
+      <section className="w-full h-[140vh] xl:h-[60vh] lg:h-screen  relative  ">
         <div className="serviceWhiteElipse" />
         <div className="absolute z-20 w-full h-full flex flex-col items-center">
           <div className="flex lg:flex-row flex-col-reverse items-center lg:px-24 w-full px-6 lg:gap-20">
             <div className="lg:w-3/5 w-full">
-              <h2 className="font-inter text-white font-semibold text-4xl">
+              <h2 className="font-inter text-white font-semibold lg:text-4xl text-xl text-center lg:text-left mt-4 lg:mt-0">
                 SaaS (Software as a Service)
                 <div className="mobileTitleUnderLine" />
               </h2>

@@ -58,12 +58,12 @@ const page = () => {
         </div>
         <div className="productBlueRightElipse" />
         <div className="absolute z-20 w-full h-full flex flex-col items-center  ">
-          <div className=" w-full  h-full flex flex-col items-center px-12">
+          <div className=" w-full  h-full flex flex-col items-center  ">
             <h2 className="font-inter text-white font-semibold lg:text-4xl lg:text-left text-center text-xl">
               Fonctionnalités Principales
               <div className="titleUnderline" />
             </h2>
-            <div className=" flex flex-col lg:flex-row w-full lg:gap-10  gap-8 flex-1 lg:flex-wrap lg:justify-between lg:mt-20 mt-10 px-6 lg:px-0">
+            <div className=" flex flex-col lg:flex-row w-full lg:gap-10  gap-8 flex-1 lg:flex-wrap lg:justify-between lg:mt-20 mt-10  lg:px-12 px-6">
               <FeatureCard
                 title="Dashboard de gestion"
                 content="Gérez facilement votre restaurant avec notre tableau de bord complet disponible en version web et mobile."
@@ -87,12 +87,12 @@ const page = () => {
       </section>
       <section className="w-full lg:h-[150vh] h-[320vh]  relative mt-20">
         <div className="absolute z-20 w-full h-full flex flex-col items-center  ">
-          <div className="w-full h-full flex flex-col items-center pb-20 lg:px-12 px-10">
+          <div className="w-full h-full flex flex-col items-center pb-20  ">
             <h2 className="font-inter text-white font-semibold lg:text-4xl text-xl text-center">
               Avantages de la Solution
               <div className="titleUnderline" />
             </h2>
-            <div className=" flex w-full gap-6 lg:flex-row flex-col    lg:justify-between lg:mt-20 mt-10">
+            <div className=" flex w-full gap-10 lg:px-12 lg:gap-5 lg:flex-row flex-col  lg:justify-between lg:mt-20 mt-10 px-6">
               <BenefitCard
                 icon={advantage1}
                 title="Optimisation de la gestion"
