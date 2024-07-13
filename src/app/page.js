@@ -8,6 +8,8 @@ import metageex from "../../public/images/metagex3.png";
 import Image from "next/image";
 import ServiceCard from "@/components/serviceCard/ServiceCard";
 import webDev from "../../public/images/app-development1.svg";
+import saasDev from "../../public/images/app-development5.svg";
+import ecommerceDev from "../../public/images/app-development4.svg";
 import mobileDev from "../../public/images/app-development2.svg";
 import vitrine from "../../public/images/app-development3.svg";
 import WideServiceCard from "@/components/serviceCard/WideServiceCard";
@@ -17,6 +19,7 @@ import product1 from "../../public/images/product1.png";
 import PortfolioSlider from "@/components/portfolioSlider/PortfolioSlider";
 import MobilePortfolioSlider from "@/components/portfolioSlider/MobilePortfolioSlider";
 import Link from "next/link";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
@@ -53,7 +56,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full h-[410vh] lg:h-[180vh] relative lg:mt-16">
+      <section className="w-full h-[350vh] lg:h-[180vh] relative lg:mt-16">
         <div className="hero2">
           <Image src={hero2} alt="hero 2" className="object-contain" />
         </div>
@@ -82,29 +85,29 @@ export default function Home() {
               />
               <div className="lg:hidden">
                 <ServiceCard
-                  icon={webDev}
-                  title="Sites vitrines"
-                  description="Réalisation de sites vitrines pour une présence en ligne professionnelle."
+                  icon={ecommerceDev}
+                  title="Sites e-commerce"
+                  description="Développement de boutiques en ligne performantes et sécurisées."
                 />
               </div>
               <div className="lg:hidden">
                 <ServiceCard
-                  icon={webDev}
-                  title="Sites vitrines"
-                  description="Réalisation de sites vitrines pour une présence en ligne professionnelle."
+                  icon={saasDev}
+                  title="SaaS (Software as a Service)"
+                  description="Développement de solutions SaaS adaptées à vos besoins d'affaires."
                 />
               </div>
             </div>
             <div className=" lg:flex  w-full lg:mt-8 mt-10 px-6 lg:px-24 justify-between gap-10 hidden ">
               <WideServiceCard
-                icon={webDev}
-                title="Développement d'applications web"
-                description="Conception et développement d'applications web sur mesure."
+                icon={ecommerceDev}
+                title="Sites e-commerce"
+                description="Développement de boutiques en ligne performantes et sécurisées."
               />
               <WideServiceCard
-                icon={webDev}
-                title="Développement d'applications web"
-                description="Conception et développement d'applications web sur mesure."
+                icon={saasDev}
+                title="SaaS (Software as a Service)"
+                description="Développement de solutions SaaS adaptées à vos besoins d'affaires."
               />
             </div>
           </div>
@@ -130,23 +133,39 @@ export default function Home() {
                   className="object-contain absolute left-0 top-10 z-10"
                 />
               </div>
-              <div className="font-inter lg:ml-20 text-center lg:text-left mt-4 lg:mt-0">
-                <h3 className="font-semibold lg:text-3xl text-xl text-white ">
+              <div className="font-inter lg:ml-20   mt-4 lg:mt-0 ">
+                <h3 className="font-semibold lg:text-3xl text-xl text-white text-center lg:text-left">
                   Solution de restauration
                 </h3>
-                <p className="font-light lg:text-xl text-sm text-white opacity-60 lg:mt-4 mt-2">
+                <p className="font-light lg:text-xl text-sm text-white opacity-60 lg:mt-4 mt-2 text-center lg:text-left">
                   Solution complète pour la gestion de restaurants.
                 </p>
+                <div className="w-full mt-4 flex justify-center">
+                  <Link
+                    href="/produits/solution-restauration"
+                    className="gradient-stroke-box"
+                  >
+                    <p>Voir plus</p>
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="flex w-full mt-10 lg:px-24 px-6 justify-between items-center flex-col-reverse lg:flex-row ">
               <div className="font-inter text-center lg:text-left lg:mt-0 mt-4 ">
                 <h3 className="font-semibold lg:text-3xl text-xl text-white ">
-                  Solution de restauration
+                  SaaS Archive Digitale
                 </h3>
                 <p className="font-light lg:text-xl text-sm text-white opacity-60 lg:mt-4 mt-2">
-                  Solution complète pour la gestion de restaurants.
+                  Solution de gestion d&apos;archives numériques.
                 </p>
+                <div className="w-full mt-4 flex justify-center">
+                  <Link
+                    href="/produits/solution-restauration"
+                    className="gradient-stroke-box"
+                  >
+                    <p>Voir plus</p>
+                  </Link>
+                </div>
               </div>
               <div className="relative lg:ml-20">
                 <Image
@@ -208,7 +227,7 @@ export default function Home() {
                 className=" hidden lg:block"
               />
 
-              <p className="text-white lg:text-xl text-sm leading-loose font-normal ">
+              <p className="text-white lg:text-xl text-sm leading-10 font-light ">
                 <span className="text-pr font-semibold lg:text-2xl text-base">
                   Chez METAGEEX
                 </span>
@@ -232,54 +251,7 @@ export default function Home() {
               Contactez-nous
               <div className="mobileTitleUnderLine" />
             </h2>
-            <div className="font-inter lg:mt-24 mt-10  w-full lg:px-24 px-6">
-              <div className="lg:flex lg:flex-row flex-col items-center lg:justify-between gap-8">
-                <div className="lg:w-1/3 w-full ">
-                  <label className="text-white font-medium ml-4">Nom</label>
-                  <input
-                    type="text"
-                    placeholder="Saisir votre nom"
-                    className="w-full lg:py-5 py-3 px-4 rounded-lg mt-2 border-pr border bg-transparent text-white outline-none"
-                  />
-                </div>
-
-                <div className="lg:w-1/3 w-full mt-6 lg:mt-0">
-                  <label className="text-white font-medium ml-4">
-                    Numéro de Téléphone
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Saisir votre uméro de téléphone"
-                    className="w-full lg:py-5 py-3 px-4 rounded-lg mt-2 border-pr border bg-transparent text-white outline-none"
-                  />
-                </div>
-
-                <div className="lg:w-1/3 w-full mt-6 lg:mt-0">
-                  <label className="text-white font-medium ml-4">Email</label>
-                  <input
-                    type="text"
-                    placeholder="Saisir votre mail"
-                    className="w-full lg:py-5 py-3 px-4 rounded-lg mt-2 border-pr border bg-transparent text-white outline-none "
-                  />
-                </div>
-              </div>
-              <div className="mt-6 ">
-                <label className="text-white font-medium ml-4">Message</label>
-                <textarea
-                  placeholder="Faites-nous part de vos besoins"
-                  className="w-full lg:py-5 py-3 px-4 rounded-lg mt-2 border-pr border bg-transparent h-40  text-white outline-none"
-                />
-              </div>
-              <div className="mt-10 flex justify-center">
-                <Link
-                  href="/contact"
-                  className="flex justify-center gap-5 items-center py-3 px-6 rounded-lg  text-center  bg-gradient-to-r from-pr to-pr-dark-opaque text-white"
-                >
-                  <p>Envoyer</p>
-                  <FaArrowRightLong />
-                </Link>
-              </div>
-            </div>
+            <ContactForm />
           </div>
         </div>
       </section>

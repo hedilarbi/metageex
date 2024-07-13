@@ -8,6 +8,10 @@ import value3 from "../../../public/images/value3.svg";
 import value4 from "../../../public/images/value4.svg";
 import fingerprint from "../../../public/images/fingerprint.svg";
 import ValueCard from "@/components/valueCard/ValueCard";
+export const metadata = {
+  title: "A propos ",
+  description: "a propos de nous metageex",
+};
 const page = () => {
   return (
     <main className=" w-full h-full relative overflow-hidden">

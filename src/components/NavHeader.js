@@ -85,10 +85,10 @@ const NavHeader = () => {
           </ul>
         </nav>
       )}
-      <Link className="w-20 h-5 lg:w-36 lg:h-9" href="/">
+      <Link className="w-24 h-6 lg:w-36 lg:h-9" href="/">
         <Image src={logo} alt="logo" className="object-cover" />
       </Link>
-      <div className="w-5 lg:hidden" />
+
       <nav className="hidden lg:block">
         <ul className="flex items-center space-x-10 text-white opacity-70 font-sarabun font-normal text-base">
           <li className="mx-2 hover:text-pr">

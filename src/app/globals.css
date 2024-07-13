@@ -53,6 +53,7 @@ background-image: url("../../public/images/fullBackground.png");
   padding: 8px 8px;
   font-family: 'inter', sans-serif;
   border-radius: 8px;
+  
 
 }
 
@@ -67,6 +68,7 @@ background-image: url("../../public/images/fullBackground.png");
 background: radial-gradient(circle, rgb(107, 193, 255) 0%, rgba(9, 148, 248, 0.6) 100%);
 z-index: -1;
  margin: -1px;
+ 
 
 
 }

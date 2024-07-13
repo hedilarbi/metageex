@@ -39,22 +39,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="w-full lg:h-[70vh] h-[50vh]  relative  ">
-        <div className="productBlueLeftElipse" />
-        <div className="absolute z-20 w-full h-full flex flex-col items-center  px-6 lg:px-0 ">
-          <div className=" lg:w-3/4 w-full mx-auto border-white border-opacity-60 rounded-2xl border lg:h-3/4 h-2/3  ">
-            <iframe
-              className="w-full h-full rounded-2xl"
-              src="https://www.youtube.com/embed/ysSxxIqKNN0?si=i_VocKa0R5aE2flL"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-      </section>
+
       <section className="w-full lg:h-[200vh] h-[310vh] relative ">
         <div className="productHero">
           <Image src={productHero} alt="productHero" />

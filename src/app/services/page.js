@@ -7,7 +7,10 @@ import servicesVitrine from "../../../public/images/servicesVitrine.svg";
 import servicesEcommerce from "../../../public/images/servicesEcommerce.svg";
 import servicesSaaS from "../../../public/images/servicesSaas.svg";
 import Link from "next/link";
-
+export const metadata = {
+  title: "Services ",
+  description: "developpement web, mobile et SaaS metageex",
+};
 const page = () => {
   return (
     <main className=" w-full h-full relative overflow-hidden">
