@@ -1,25 +1,34 @@
 import React from "react";
 import styles from "./portfolioSlider.module.css";
-import project1 from "../../../public/images/project1.png";
+
 import Image from "next/image";
-const Slider = () => {
+
+const Slider = ({ slides, current }) => {
   return (
-    <div className="flex w-full items-center  px-16">
-      <div className={styles.imageContainer}>
-        <Image src={project1} alt="project1" className="w-full h-full " />
-        <div className={styles.testContainer} />
-      </div>
-      <div className={styles.activeImageContainer}>
-        <Image
-          src={project1}
-          alt="project1"
-          className="w-full h-full object-contain "
-        />
-        <div className={styles.activeTestContainer} />
-      </div>
-      <div className={styles.imageContainer}>
-        <Image src={project1} alt="project1" className="w-full h-full " />
-        <div className={styles.testContainer} />
+    <div className="slider-wrapper">
+      <div
+        className="slides"
+        style={{
+          transform:
+            current >= 0
+              ? `translateX(-${current * 33.33}%)`
+              : `translateX(${current * -1 * 33.33}%)`,
+        }}
+      >
+        {slides.map((slide) => (
+          <div
+            key={slide.id}
+            className={`slide ${
+              current === slides.indexOf(slide) - 1 ? "active" : ""
+            }`}
+          >
+            <Image
+              src={slide.image}
+              alt="project"
+              className="h-full object-contain"
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

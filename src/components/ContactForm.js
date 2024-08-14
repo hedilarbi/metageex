@@ -35,6 +35,7 @@ const ContactForm = () => {
             onChange={(e) => setName(e.target.value)}
             placeholder="Saisir votre nom"
             className="w-full lg:py-5 py-3 px-4 rounded-lg mt-2 border-pr border bg-transparent text-white outline-none"
+            value={name}
           />
         </div>
 

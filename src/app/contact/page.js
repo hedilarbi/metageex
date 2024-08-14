@@ -27,9 +27,9 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="w-full lg:h-screen h-[120vh] relative    ">
+      <section className="w-full  relative  mb-40   ">
         <div className="productBlueLeftElipse" />
-        <div className="z-20 absolute left-0 top-0 w-full h-full">
+        <div className="z-20  left-0 top-0 w-full h-full">
           <div className="w-full flex flex-col items-center h-full lg:mt-4">
             <ContactForm />
           </div>

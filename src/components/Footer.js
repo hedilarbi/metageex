@@ -5,7 +5,7 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 const Footer = () => {
   return (
-    <div className="h-[50vh] relative overflow-hidden">
+    <footer className="h-[50vh] relative overflow-hidden">
       <div className="footer-left-elipse" />
       <div className="bg-[#151D28] absolute left-0 top-0 h-full w-full z-20  overflow-hidden lg:px-24 px-6 ">
         <div className="w-full h-full flex lg:justify-between lg:gap-20 gap-5 lg:px-8 py-6 ">
@@ -79,7 +79,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
