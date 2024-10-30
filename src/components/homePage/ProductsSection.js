@@ -56,7 +56,7 @@ const ProductsSection = () => {
               </p>
               <div className="w-full mt-4 flex justify-center">
                 <Link
-                  href="/produits/solution-restauration"
+                  href="/produits/solution-archive-numerique"
                   className="gradient-stroke-box"
                 >
                   <p>Voir plus</p>

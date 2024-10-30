@@ -23,14 +23,17 @@ const page = () => {
           <div className="serviceHeroContainer">
             <div className="relative  lg:w-2/3  w-full">
               <h1 className="font-inter font-semibold lg:text-4xl text-xl text-white text-center">
-                Révolutionnez la gestion de votre restaurant avec notre solution
-                complète
+                Révolutionnez la gestion de votre archive
               </h1>
               <div className="shadowCircle" />
             </div>
             <p className="lg:w-2/3 text-white font-inter lg:text-2xl text-sm text-opacity-60 font-light text-center  leading-loose tracking-wide px-6 mt-4 lg:mt-12">
-              Une suite d&apos;outils modernes pour une gestion optimale et une
-              expérience client améliorée.
+              Simplifiez la gestion de vos archives numériques avec notre
+              solution SaaS intuitive et sécurisée. Stockez, organisez et
+              partagez vos documents en toute simplicité.
+            </p>
+            <p className="lg:w-2/3 text-white font-inter lg:text-2xl text-sm text-opacity-60 font-light text-center  leading-loose tracking-wide px-6 mt-4 lg:mt-12">
+              En cours de développement
             </p>
             <button className="flex justify-center lg:text-base text-sm gap-5 items-center lg:py-4 py-2 px-6 rounded-lg  text-center  bg-gradient-to-r from-pr to-pr-dark-opaque text-white lg:mt-12 mt-4">
               <p>Contactez Nous</p>
@@ -39,7 +42,7 @@ const page = () => {
           </div>
         </div>
       </section>
-
+      {/* 
       <section className="w-full lg:h-[200vh] h-[310vh] relative ">
         <div className="productHero">
           <Image src={productHero} alt="productHero" />
@@ -72,8 +75,8 @@ const page = () => {
             </div>
           </div>
         </div>
-      </section>
-      <section className="w-full lg:h-[150vh] h-[320vh]  relative mt-20">
+      </section> */}
+      {/* <section className="w-full lg:h-[150vh] h-[320vh]  relative mt-20">
         <div className="absolute z-20 w-full h-full flex flex-col items-center  ">
           <div className="w-full h-full flex flex-col items-center pb-20  ">
             <h2 className="font-inter text-white font-semibold lg:text-4xl text-xl text-center">
@@ -113,7 +116,7 @@ const page = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 };
