@@ -3,9 +3,9 @@ export async function POST(req) {
   try {
     const { name, tel, email, message } = await req.json();
     const transporter = nodemailer.createTransport({
-      service: "GoDaddy",
-      secure: true,
-      port: 465,
+      service: "smtpout.secureserver.net",
+      secure: false,
+
       auth: {
         user: process.env.MAIL_USER,
         pass: process.env.MAIL_PASS,
