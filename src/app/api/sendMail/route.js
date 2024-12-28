@@ -1,6 +1,8 @@
 import nodemailer from "nodemailer";
 export async function POST(req) {
   try {
+    console.log("received request");
+    console.log(process.env.MAIL_USER);
     const { name, tel, email, message } = await req.json();
     const transporter = nodemailer.createTransport({
       service: "GoDaddy",
