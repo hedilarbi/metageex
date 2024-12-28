@@ -6,7 +6,8 @@ export async function POST(req) {
     const { name, tel, email, message } = await req.json();
     const transporter = nodemailer.createTransport({
       service: "GoDaddy",
-      secure: false,
+      secure: true,
+      port: 465,
       auth: {
         user: process.env.MAIL_USER,
         pass: process.env.MAIL_PASS,
