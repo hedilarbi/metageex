@@ -17,7 +17,7 @@ const ContactForm = () => {
         email,
         message,
       });
-      console.log(res.data);
+
       if (res.status === 200 && res.data.status === 200) {
         alert("Votre message a été envoyé avec succès");
       }

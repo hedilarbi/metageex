@@ -5,9 +5,9 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 const Footer = () => {
   return (
-    <footer className="h-[50vh] relative overflow-hidden">
+    <footer className="h-[40vh] relative overflow-hidden">
       <div className="footer-left-elipse" />
-      <div className="bg-[#151D28] absolute left-0 top-0 h-full w-full z-20  overflow-hidden lg:px-24 px-6 ">
+      <div className="bg-[#151D28] absolute left-0 top-0 h-full w-full   overflow-hidden lg:px-24 px-6 ">
         <div className="w-full h-full flex lg:justify-between lg:gap-20 gap-5 lg:px-8 py-6 ">
           <div className="lg:w-1/3 w-3/5 pt-8  ">
             <div>
@@ -20,7 +20,7 @@ const Footer = () => {
                 Transformez vos idées en solutions digitales innovantes
               </p>
             </div>
-            <div className="flex gap-4 mt-10 ">
+            {/* <div className="flex gap-4 mt-10 ">
               <div className="border border-white border-opacity-70 text-white text-opacity-70 rounded-full lg:p-3 p-1">
                 <div className="hidden lg:block">
                   <FaFacebookF size={20} />
@@ -45,10 +45,10 @@ const Footer = () => {
                   <FaLinkedinIn size={12} />
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
-          <div className="pt-8">
-            <ul className="font-inter text-white font-light lg:text-lg text-sm space-y-2 text-opacity-50">
+          <div className="pt-8 z-40">
+            <ul className="font-inter text-white font-light lg:text-lg text-sm space-y-3 text-opacity-50">
               <li className="text-white text-opacity-100">
                 <Link href="/">Accueil</Link>
               </li>
@@ -62,7 +62,7 @@ const Footer = () => {
               <li className="text-opacity-50">
                 <Link href="/apropos">À propos</Link>
               </li>
-              <li className="text-opacity-50">
+              <li className="text-opacity-50 ">
                 <Link href="/contact">Contact</Link>
               </li>
             </ul>

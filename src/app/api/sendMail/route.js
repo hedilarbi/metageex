@@ -14,7 +14,7 @@ export async function POST(req) {
     const mailOptions = {
       from: process.env.MAIL_USER,
       to: "hedi.solve@gmail.com",
-      subject: "Reçu commande Casse-croûte Courteau",
+      subject: "Mail from metageex.com",
 
       html: `
       <h1>Contact form</h1>
@@ -25,12 +25,13 @@ export async function POST(req) {
     `,
     };
     const res = await transporter.sendMail(mailOptions);
-
+    console.log("Email sent: " + res);
     return Response.json({
       message: "Registration successful",
       status: 200,
     });
   } catch (e) {
+    console.log(e);
     return new Response(500, { message: "Registration failed" });
   }
 }

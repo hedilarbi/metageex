@@ -39,7 +39,7 @@ const NavHeader = () => {
                 className={"/" + currentPath === "/" ? "text-pr" : "text-white"}
                 onClick={() => handleNavigation("/")}
               >
-                Home
+                Accueil
               </button>
             </li>
             <li className="mx-2 hover:text-pr">
@@ -96,7 +96,7 @@ const NavHeader = () => {
               href="/"
               className={"/" + currentPath === "/" ? "text-pr" : "text-white"}
             >
-              Home
+              Accueil
             </Link>
           </li>
           <li className="mx-2 hover:text-pr">
