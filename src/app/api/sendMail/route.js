@@ -3,9 +3,9 @@ export async function POST(req) {
   try {
     const { name, tel, email, message } = await req.json();
     const transporter = nodemailer.createTransport({
-      service: "smtpout.secureserver.net",
-      secure: false,
-      port: 587,
+      host: "smtpout.secureserver.net",
+      secure: true,
+      port: 465,
       auth: {
         user: process.env.MAIL_USER,
         pass: process.env.MAIL_PASS,
@@ -28,7 +28,7 @@ export async function POST(req) {
     `,
     };
     const res = await transporter.sendMail(mailOptions);
-    console.log("Email sent: " + res);
+
     return Response.json({
       message: "Registration successful",
       status: 200,
