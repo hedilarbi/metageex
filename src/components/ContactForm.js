@@ -20,9 +20,8 @@ const ContactForm = () => {
       });
 
       if (res.status === 200 && res.data.status === 200) {
-        alert("Votre message a été envoyé avec succès");
+        setSuccessModal(true);
       }
-      setSuccessModal(true);
     } catch (e) {
       console.log(e);
     }
