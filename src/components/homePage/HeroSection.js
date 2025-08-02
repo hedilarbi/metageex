@@ -5,14 +5,14 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import hero1 from "../../../public/images/hero1.svg";
 const HeroSection = () => {
   return (
-    <section className="w-full h-screen relative  ">
+    <section className="w-full h-screen relative ">
       <div className="top-half-elipse"></div>
 
       <div className="hero1">
         <Image src={hero1} alt="hero 1" className="object-contain" />
       </div>
 
-      <div className=" flex flex-col items-center justify-center mt-14 px-6 pt-4 z-10  w-full h-full ">
+      <div className=" flex flex-col items-center justify-center  px-6 pt-4 z-10  w-full h-full ">
         <h1 className="text-white font-inter font-semibold lg:text-5xl text-xl w-full text-center lg:w-2/3  leading-tight">
           Transformez Vos Idées En Solutions Digitales Innovantes
         </h1>
