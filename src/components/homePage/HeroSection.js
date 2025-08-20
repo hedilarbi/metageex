@@ -9,7 +9,13 @@ const HeroSection = () => {
       <div className="top-half-elipse"></div>
 
       <div className="hero1">
-        <Image src={hero1} alt="hero 1" className="object-contain" />
+        <Image
+          src={hero1}
+          alt="hero 1"
+          className="object-contain"
+          priority
+          sizes="(min-width:1024px) 900px, 100vw"
+        />
       </div>
 
       <div className=" flex flex-col items-center justify-center  px-6 pt-4 z-10  w-full h-full ">

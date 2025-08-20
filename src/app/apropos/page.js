@@ -5,8 +5,10 @@ import ValuesSection from "@/components/aboutPage/ValuesSection";
 import DistingueSection from "@/components/aboutPage/DistingueSection";
 import PropositionSection from "@/components/aboutPage/PropositionSection";
 export const metadata = {
-  title: "A propos ",
-  description: "a propos de nous metageex",
+  title: "À propos — Metageex",
+  description:
+    "Notre mission, notre équipe et notre méthodologie de développement sur mesure.",
+  alternates: { canonical: "/apropos" },
 };
 const page = () => {
   return (
