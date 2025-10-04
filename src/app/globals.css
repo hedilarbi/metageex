@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .gradient-bg {
+    background-image: linear-gradient(135deg, #6bc1ff 0%, #0994f8 100%);
+  }
+  .hover-scale {
+    transition: transform 0.3s ease;
+  }
+}
+
 body {
   position: relative;
   width: 100vw;
