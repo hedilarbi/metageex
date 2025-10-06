@@ -11,9 +11,13 @@ import {
 } from "react-icons/fa6";
 import Image from "next/image";
 import productHero from "../../../../public/images/productHero.svg";
+import Link from "next/link";
 const Techs = () => {
   return (
-    <section id="process" className="w-full  relative  font-inter py-20 ">
+    <section
+      id="process"
+      className="w-full  relative  font-inter  md:py-20 py-10"
+    >
       <div className="productHero">
         <Image src={productHero} alt="productHero" />
       </div>
@@ -31,11 +35,11 @@ const Techs = () => {
         </div>
 
         <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-pr opacity-30"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-pr opacity-30 md:block hidden"></div>
 
           <div className="space-y-16">
             <div className="flex items-center">
-              <div className="flex-1 pr-8">
+              <div className="w-full md:pr-8 pr-0 md:flex-1 md:w-auto">
                 <div className={styles.container}>
                   <div className={styles.shadowCircle} />
                   <div className="flex items-center mb-4">
@@ -72,23 +76,23 @@ const Techs = () => {
                   </ul>
                 </div>
               </div>
-              <div className="w-16 h-16 gradient-bg rounded-full flex items-center justify-center relative z-10">
+              <div className="w-16 h-16 gradient-bg rounded-full  items-center justify-center relative z-10 md:flex hidden">
                 <div className="text-white text-xl">
                   <FaLightbulb />
                 </div>
               </div>
-              <div className="flex-1 pl-8"></div>
+              <div className="flex-1 pl-8 md:block hidden"></div>
             </div>
 
             <div className="flex items-center">
-              <div className="flex-1 pr-8"></div>
+              <div className="flex-1 pr-8 md:block hidden"></div>
 
-              <div className="w-16 h-16 gradient-bg rounded-full flex items-center justify-center relative z-10">
+              <div className="w-16 h-16 gradient-bg rounded-full md:flex hidden items-center justify-center relative z-10">
                 <div className="text-white text-xl">
                   <FaPenRuler />
                 </div>
               </div>
-              <div className="flex-1 pl-8">
+              <div className="md:flex-1 md:pl-8 pl-0 w-full md:w-auto">
                 <div className={styles.container}>
                   <div className={styles.shadowCircle} />
                   <div className="flex items-center mb-4">
@@ -128,7 +132,7 @@ const Techs = () => {
             </div>
 
             <div className="flex items-center">
-              <div className="flex-1 pr-8">
+              <div className="md:flex-1 md:pr-8 pr-0 md:w-auto w-full">
                 <div className={styles.container}>
                   <div className={styles.shadowCircle} />
                   <div className="flex items-center mb-4">
@@ -165,22 +169,22 @@ const Techs = () => {
                   </ul>
                 </div>
               </div>
-              <div className="w-16 h-16 gradient-bg rounded-full flex items-center justify-center relative z-10">
+              <div className="w-16 h-16 gradient-bg rounded-full md:flex hidden items-center justify-center relative z-10">
                 <div className="text-white text-xl">
                   <FaCode />
                 </div>
               </div>
-              <div className="flex-1 pl-8"></div>
+              <div className="flex-1 pl-8 hidden md:block"></div>
             </div>
 
             <div className="flex items-center">
-              <div className="flex-1 pr-8"></div>
-              <div className="w-16 h-16 gradient-bg rounded-full flex items-center justify-center relative z-10">
+              <div className="flex-1 pr-8 md:block hidden"></div>
+              <div className="w-16 h-16 gradient-bg rounded-full md:flex hidden items-center justify-center relative z-10">
                 <div className="text-white text-xl">
                   <FaVial />
                 </div>
               </div>
-              <div className="flex-1 pl-8">
+              <div className="md:flex-1 md:pl-8 pl-0 w-full md:w-auto">
                 <div className={styles.container}>
                   <div className={styles.shadowCircle} />
                   <div className="flex items-center mb-4">
@@ -220,7 +224,7 @@ const Techs = () => {
             </div>
 
             <div className="flex items-center">
-              <div className="flex-1 pr-8">
+              <div className="flex-1 md:pr-8 pr-0 md:w-auto w-full">
                 <div className={styles.container}>
                   <div className={styles.shadowCircle} />
                   <div className="flex items-center mb-4">
@@ -257,15 +261,23 @@ const Techs = () => {
                   </ul>
                 </div>
               </div>
-              <div className="w-16 h-16 gradient-bg rounded-full flex items-center justify-center relative z-10">
+              <div className="w-16 h-16 gradient-bg rounded-full md:flex hidden items-center justify-center relative z-10">
                 <div className="text-white text-xl">
                   <FaRocket />
                 </div>
               </div>
-              <div className="flex-1 pl-8"></div>
+              <div className="flex-1 pl-8 md:block hidden"></div>
             </div>
           </div>
         </div>
+      </div>
+      <div className="text-center mt-10">
+        <Link
+          href="/contact"
+          className="gradient-bg text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition"
+        >
+          Demandez un devis
+        </Link>
       </div>
     </section>
   );

@@ -18,7 +18,7 @@ import {
 import styles from "./FeatureCard.module.css";
 const Technologies = () => {
   return (
-    <section id="technologies" className="py-20">
+    <section id="technologies" className="md:pb-20 pb-10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="w-full text-center flex flex-col items-center mb-16">
           <h2 className="font-inter text-white font-semibold lg:text-4xl text-center text-xl">

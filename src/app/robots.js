@@ -1,12 +1,17 @@
+// app/robots.ts
+
 export default function robots() {
-  const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://metageex.com";
+  const base = "https://metageex.com";
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-      disallow: ["/api/"], // adapte si besoin
-    },
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        // évite l’indexation d’assets sans valeur SEO
+        disallow: ["/api/", "/_next/", "/private/", "/admin/"],
+      },
+    ],
     sitemap: `${base}/sitemap.xml`,
-    host: base,
+    host: "metageex.com",
   };
 }

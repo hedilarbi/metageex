@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import PortfolioImg from "../../../../public/images/portfolio.png";
+import portfolioWeb1 from "../../../../public/images/portfolioWeb1.png";
+import portfolioWeb5 from "../../../../public/images/portfolioWeb5.png";
+import portfolioWeb4 from "../../../../public/images/portfolioWeb4.png";
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 import styles from "./FeatureCard.module.css";
@@ -23,7 +25,7 @@ const Portfolio = () => {
           <div className={styles.container}>
             <Image
               className="w-full h-64 object-cover rounded-2xl"
-              src={PortfolioImg}
+              src={portfolioWeb1}
               alt="modern e-commerce platform interface with clean design"
               width={400}
               height={400}
@@ -34,19 +36,20 @@ const Portfolio = () => {
                   E-commerce
                 </span>
                 <span className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm">
-                  React
+                  Next Js
                 </span>
               </div>
               <h3 className="text-xl font-bold text-white mb-3">
-                Plateforme E-commerce Luxury
+                Casse-croûte Courteau - Restaurant en Ligne
               </h3>
               <p className="text-white opacity-60 mb-6">
-                Plateforme e-commerce haut de gamme avec système de
-                personnalisation avancé et intégration multi-canaux.
+                Plateforme e-commerce pour un restaurant local avec menu en
+                ligne et système de commande.
               </p>
 
               <Link
-                href="/"
+                href="https://lecourteau.com"
+                target="_blank"
                 className="text-pr hover:text-blue-700 font-medium flex items-center gap-2"
               >
                 Voir le projet{" "}
@@ -60,7 +63,7 @@ const Portfolio = () => {
           <div className={styles.container}>
             <Image
               className="w-full h-64 object-cover rounded-2xl"
-              src={PortfolioImg}
+              src={portfolioWeb5}
               alt="healthcare management system dashboard with charts and patient data"
               width={400}
               height={400}
@@ -68,22 +71,23 @@ const Portfolio = () => {
             <div className="p-8">
               <div className="flex items-center space-x-2 mb-4">
                 <span className="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">
-                  Healthcare
+                  Backoffice
                 </span>
                 <span className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm">
-                  Vue.js
+                  Next Js
                 </span>
               </div>
               <h3 className="text-xl font-bold text-white mb-3">
-                Système de Gestion Hospitalière
+                LeMegatoit - Billeterie en Ligne
               </h3>
               <p className="text-white opacity-60 mb-6">
-                Application complète de gestion hospitalière avec dossiers
-                patients électroniques et planification.
+                Backoffice d&apos;un système de billetterie en ligne avec
+                gestion des événements et paiements sécurisés.
               </p>
 
               <Link
-                href="/"
+                href="https://lemegatoit.com"
+                target="_blank"
                 className="text-pr hover:text-blue-700 font-medium flex items-center gap-2"
               >
                 Voir le projet{" "}
@@ -97,7 +101,7 @@ const Portfolio = () => {
           <div className={styles.container}>
             <Image
               className="w-full h-64 object-cover rounded-2xl"
-              src={PortfolioImg}
+              src={portfolioWeb4}
               alt="fintech banking application interface with financial charts"
               width={400}
               height={400}
@@ -105,22 +109,23 @@ const Portfolio = () => {
             <div className="p-8">
               <div className="flex items-center space-x-2 mb-4">
                 <span className="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">
-                  FinTech
+                  E-commerce
                 </span>
                 <span className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm">
-                  Node.js
+                  Prestashop
                 </span>
               </div>
               <h3 className="text-xl font-bold text-white mb-3">
-                Application Bancaire Mobile
+                Tuline Création - Boutique en Ligne
               </h3>
               <p className="text-white opacity-60 mb-6">
-                Solution bancaire digitale complète avec paiements instantanés
-                et gestion de portefeuille.
+                Solution e-commerce complète avec gestion des produits,
+                paiements en ligne et suivi des commandes.
               </p>
 
               <Link
-                href="/"
+                href="https://tulinecreation.com"
+                target="_blank"
                 className="text-pr hover:text-blue-700 font-medium flex items-center gap-2 "
               >
                 <span>Voir le projet </span>
@@ -132,9 +137,12 @@ const Portfolio = () => {
         </div>
 
         <div className="text-center">
-          <button className="gradient-bg text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition">
+          <Link
+            href="/portfolio/#web"
+            className="gradient-bg text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition"
+          >
             Voir Tous Nos Projets
-          </button>
+          </Link>
         </div>
       </div>
     </section>

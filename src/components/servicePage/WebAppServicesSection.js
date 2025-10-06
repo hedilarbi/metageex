@@ -6,7 +6,7 @@ import styles from "./FeatureCard.module.css";
 import { FaCheck } from "react-icons/fa6";
 const WebAppServicesSection = () => {
   return (
-    <section className="w-full  relative  font-inter pb-20">
+    <section className="w-full  relative  font-inter py-20 md:py-20">
       <div className="productHero">
         <Image src={productHero} alt="productHero" />
       </div>
@@ -33,7 +33,7 @@ const WebAppServicesSection = () => {
                   <div className="text-pr">
                     <FaCheck />
                   </div>
-                  <span>Frontend React/Vue.js</span>
+                  <span>Frontend React/Next js</span>
                 </li>
                 <li className="flex items-center text-white font-inter font-normal gap-2">
                   <div className="text-pr">
@@ -45,13 +45,19 @@ const WebAppServicesSection = () => {
                   <div className="text-pr">
                     <FaCheck />
                   </div>
+                  <span>CMS Wordpress/Prestashop</span>
+                </li>
+                <li className="flex items-center text-white font-inter font-normal gap-2">
+                  <div className="text-pr">
+                    <FaCheck />
+                  </div>
                   <span>Base de données optimisées</span>
                 </li>
                 <li className="flex items-center text-white font-inter font-normal gap-2">
                   <div className="text-pr">
                     <FaCheck />
                   </div>
-                  <span>APIs RESTful/GraphQL</span>
+                  <span>APIs RESTful</span>
                 </li>
               </ul>
             </div>
@@ -144,7 +150,7 @@ const WebAppServicesSection = () => {
                   <div className="text-pr">
                     <FaCheck />
                   </div>
-                  <span>AWS/Azure/GCP</span>
+                  <span>AWS</span>
                 </li>
                 <li className="flex items-center text-white font-inter font-normal gap-2">
                   <div className="text-pr">

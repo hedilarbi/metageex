@@ -3,7 +3,7 @@ import React from "react";
 import aboutImage from "../../../public/images/aboutImage.svg";
 const DescriptionSection = () => {
   return (
-    <section className="w-full  relative  lg:mt-48 mt-14 ">
+    <section className="w-full  relative mt-12 lg:mt-24 ">
       <div className="serviceBlueHalfElipse" />
       <div className=" z-20 w-full h-full flex flex-col items-center">
         <div className="flex lg:flex-row flex-col items-center lg:px-12 w-full px-6  lg:mt-10">

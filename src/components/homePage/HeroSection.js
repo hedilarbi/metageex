@@ -5,7 +5,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import hero1 from "../../../public/images/hero1.svg";
 const HeroSection = () => {
   return (
-    <section className="w-full h-screen relative ">
+    <section className="w-full h-[70vh] mt-20 md:mt-32 relative ">
       <div className="top-half-elipse"></div>
 
       <div className="hero1">
@@ -22,7 +22,7 @@ const HeroSection = () => {
         <h1 className="text-white font-inter font-semibold lg:text-5xl text-xl w-full text-center lg:w-2/3  leading-tight">
           Transformez Vos Idées En Solutions Digitales Innovantes
         </h1>
-        <p className="text-white opacity-60 font-inter font-light lg:text-2xl text-base text-center lg:w-2/3 mt-8 leading-loose ">
+        <p className="text-white opacity-60 font-inter font-light lg:text-2xl text-sm text-center lg:w-2/3 mt-8 leading-loose ">
           Des applications web et mobiles, des sites vitrines, des sites
           e-commerce et des solutions SaaS conçus pour propulser votre
           entreprise vers l&apos;avenir
@@ -37,7 +37,7 @@ const HeroSection = () => {
             <FaArrowRightLong />
           </Link>
           <Link href="/contact" className="gradient-stroke-box">
-            <p>Planifier une demo</p>
+            <p>Planifier un appel</p>
           </Link>
         </div>
       </div>

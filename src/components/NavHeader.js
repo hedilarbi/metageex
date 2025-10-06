@@ -47,144 +47,132 @@ const NavHeader = () => {
   const isActive = (path) => currentPath === path;
 
   return (
-    <header className="absolute top-0 left-0 flex justify-between items-center w-screen lg:px-12 py-4 px-6 lg:pt-9 z-20">
+    <header className="absolute top-0 left-0 flex justify-between items-center w-screen lg:px-12 h-20 md:h-32 px-6  z-20 ">
       {/* Mobile burger */}
       <button
         className="lg:hidden text-white relative"
         onClick={() => setShowNavBar(true)}
         aria-label="Ouvrir le menu"
       >
-        <IoMenuOutline size={24} />
+        <IoMenuOutline size={28} />
       </button>
 
-      {/* Mobile drawer */}
-      {showNavBar && (
-        <nav className="lg:hidden z-50 absolute top-4 left-0 bg-[#2B2E33] pt-3 px-3 pb-10 rounded-b-2xl border-pr border-t-2">
-          <div className="flex justify-end">
-            <button
-              className="text-pr"
+      <nav
+        className={`
+            lg:hidden z-50 fixed top-0 left-0 h-full w-4/5 max-w-xs bg-[#2B2E33] pt-3 px-3 pb-10  border-pr border-r-2
+            transition-transform duration-300 ease-in-out
+            ${showNavBar ? "translate-x-0" : "-translate-x-full"}
+          `}
+        style={{ boxShadow: "2px 0 16px rgba(0,0,0,0.15)" }}
+      >
+        <div className="flex justify-end">
+          <button
+            className="text-pr"
+            onClick={() => setShowNavBar(false)}
+            aria-label="Fermer le menu"
+          >
+            <IoCloseSharp size={28} />
+          </button>
+        </div>
+
+        <ul className="space-y-5 z-50 font-sarabun font-normal text-sm">
+          <li className="mx-2">
+            <Link
+              href="/"
+              className={
+                isActive("/") ? "text-pr" : "text-white/70 hover:text-pr"
+              }
               onClick={() => setShowNavBar(false)}
-              aria-label="Fermer le menu"
             >
-              <IoCloseSharp size={20} />
-            </button>
-          </div>
+              Accueil
+            </Link>
+          </li>
 
-          <ul className="space-y-5 z-50 font-sarabun font-normal text-sm">
-            <li className="mx-2">
-              <Link
-                href="/"
-                className={
-                  isActive("/") ? "text-pr" : "text-white/70 hover:text-pr"
-                }
-                onClick={() => handleNavigation("/")}
-              >
-                Accueil
-              </Link>
-            </li>
+          {/* Parent li has NO opacity; links control their own tone */}
+          <li className="mx-2">
+            <Link
+              href="/services"
+              className={
+                isActive("/services")
+                  ? "text-pr"
+                  : "text-white/70 hover:text-pr"
+              }
+              onClick={() => setShowNavBar(false)}
+            >
+              Services
+            </Link>
 
-            {/* Parent li has NO opacity; links control their own tone */}
-            <li className="mx-2">
-              <Link
-                href="/services"
-                className={
-                  isActive("/services")
-                    ? "text-pr"
-                    : "text-white/70 hover:text-pr"
-                }
-                onClick={() => handleNavigation("/services")}
-              >
-                Services
-              </Link>
+            {/* Mobile submenu */}
+            <ul className="ml-4 mt-2 space-y-2">
+              <li>
+                <Link
+                  href="/services/developpement-application-web"
+                  onClick={() => setShowNavBar(false)}
+                  className="block px-1 py-1 text-white/70 hover:text-pr"
+                >
+                  Développement application web
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/developpement-application-mobile"
+                  onClick={() => setShowNavBar(false)}
+                  className="block px-1 py-1 text-white/70 hover:text-pr"
+                >
+                  Développement application mobile
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/developpement-site-vitrine"
+                  onClick={() => setShowNavBar(false)}
+                  className="block px-1 py-1 text-white/70 hover:text-pr"
+                >
+                  Développement site vitrine
+                </Link>
+              </li>
+            </ul>
+          </li>
 
-              {/* Mobile submenu */}
-              <ul className="ml-4 mt-2 space-y-2">
-                <li>
-                  <Link
-                    href="/services/developpement-application-web"
-                    onClick={() =>
-                      handleNavigation(
-                        "/services/developpement-application-web"
-                      )
-                    }
-                    className="block px-1 py-1 text-white/70 hover:text-pr"
-                  >
-                    Développement application web
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/developpement-application-mobile"
-                    onClick={() =>
-                      handleNavigation(
-                        "/services/developpement-application-mobile"
-                      )
-                    }
-                    className="block px-1 py-1 text-white/70 hover:text-pr"
-                  >
-                    Développement application mobile
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/developpement-site-vitrine"
-                    onClick={() =>
-                      handleNavigation("/services/developpement-site-vitrine")
-                    }
-                    className="block px-1 py-1 text-white/70 hover:text-pr"
-                  >
-                    Développement site vitrine
-                  </Link>
-                </li>
-              </ul>
-            </li>
+          <li className="mx-2">
+            <Link
+              href="/portfolio"
+              className={
+                isActive("/portfolio")
+                  ? "text-pr"
+                  : "text-white/70 hover:text-pr"
+              }
+              onClick={() => setShowNavBar(false)}
+            >
+              Portfolio
+            </Link>
+          </li>
 
-            <li className="mx-2">
-              <Link
-                href="/produits/solution-restauration"
-                className={
-                  isActive("/produits")
-                    ? "text-pr"
-                    : "text-white/70 hover:text-pr"
-                }
-                onClick={() =>
-                  handleNavigation("/produits/solution-restauration")
-                }
-              >
-                Produits
-              </Link>
-            </li>
+          <li className="mx-2">
+            <Link
+              href="/apropos"
+              className={
+                isActive("/apropos") ? "text-pr" : "text-white/70 hover:text-pr"
+              }
+              onClick={() => setShowNavBar(false)}
+            >
+              À propos de nous
+            </Link>
+          </li>
 
-            <li className="mx-2">
-              <Link
-                href="/apropos"
-                className={
-                  isActive("/apropos")
-                    ? "text-pr"
-                    : "text-white/70 hover:text-pr"
-                }
-                onClick={() => handleNavigation("/apropos")}
-              >
-                À propos de nous
-              </Link>
-            </li>
-
-            <li className="mx-2">
-              <Link
-                href="/contact"
-                className={
-                  isActive("/contact")
-                    ? "text-pr"
-                    : "text-white/70 hover:text-pr"
-                }
-                onClick={() => handleNavigation("/contact")}
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      )}
+          <li className="mx-2">
+            <Link
+              href="/contact"
+              className={
+                isActive("/contact") ? "text-pr" : "text-white/70 hover:text-pr"
+              }
+              onClick={() => setShowNavBar(false)}
+            >
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </nav>
 
       {/* Logo */}
       <Link className="w-24 h-6 lg:w-36 lg:h-9" href="/" aria-label="Accueil">
@@ -249,7 +237,7 @@ const NavHeader = () => {
                 </li>
                 <li role="none">
                   <Link
-                    href="/services/developpement-site-vitrine"
+                    href="/services/site-vitrine"
                     className="block px-4 py-2 text-white/70 hover:text-pr"
                     role="menuitem"
                     onClick={() => setShowDropdown(false)}
@@ -263,14 +251,14 @@ const NavHeader = () => {
 
           <li className="mx-2">
             <Link
-              href="/produits/solution-restauration"
+              href="/portfolio"
               className={
-                isActive("/produits")
+                isActive("/portfolio")
                   ? "text-pr"
                   : "text-white/70 hover:text-pr"
               }
             >
-              Produits
+              Porfolio
             </Link>
           </li>
 
@@ -299,7 +287,7 @@ const NavHeader = () => {
       </nav>
 
       <Link href="/contact" className="gradient-stroke-box hidden lg:block">
-        Planifier une demo
+        Planifier un appel
       </Link>
     </header>
   );

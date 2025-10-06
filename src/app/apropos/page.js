@@ -1,9 +1,9 @@
 import React from "react";
-import HeroSection from "@/components/aboutPage/HeroSection";
-import DescriptionSection from "@/components/aboutPage/DescriptionSection";
-import ValuesSection from "@/components/aboutPage/ValuesSection";
-import DistingueSection from "@/components/aboutPage/DistingueSection";
-import PropositionSection from "@/components/aboutPage/PropositionSection";
+import HeroSection from "../../components/aboutPage/HeroSection";
+import DescriptionSection from "../../components/aboutPage/DescriptionSection";
+import ValuesSection from "../../components/aboutPage/ValuesSection";
+import DistingueSection from "../../components/aboutPage/DistingueSection";
+import PropositionSection from "../../components/aboutPage/PropositionSection";
 export const metadata = {
   title: "À propos — Metageex",
   description:

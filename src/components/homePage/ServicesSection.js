@@ -38,7 +38,7 @@ const ServicesSection = () => {
               title="Sites vitrines"
               description="Réalisation de sites vitrines pour une présence en ligne professionnelle."
             />
-            <div className="lg:hidden">
+            {/* <div className="lg:hidden">
               <ServiceCard
                 icon={ecommerceDev}
                 title="Sites e-commerce"
@@ -51,9 +51,9 @@ const ServicesSection = () => {
                 title="SaaS (Software as a Service)"
                 description="Développement de solutions SaaS adaptées à vos besoins d'affaires."
               />
-            </div>
+            </div> */}
           </div>
-          <div className=" lg:flex  w-full lg:mt-8 mt-10 px-6 lg:px-24 justify-between gap-10 hidden ">
+          {/* <div className=" lg:flex  w-full lg:mt-8 mt-10 px-6 lg:px-24 justify-between gap-10 hidden ">
             <WideServiceCard
               icon={ecommerceDev}
               title="Sites e-commerce"
@@ -64,7 +64,7 @@ const ServicesSection = () => {
               title="SaaS (Software as a Service)"
               description="Développement de solutions SaaS adaptées à vos besoins d'affaires."
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

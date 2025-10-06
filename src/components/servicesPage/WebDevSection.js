@@ -3,7 +3,7 @@ import React from "react";
 import servicesWebDev from "../../../public/images/servicesWebDev.svg";
 const WebDevSection = () => {
   return (
-    <section className="w-full  relative mt-32 lg:mt-0 ">
+    <section className="w-full  relative mt-12 lg:mt-24 ">
       <div className="serviceBlueHalfElipse" />
       <div className=" z-20 w-full h-full flex flex-col items-center">
         <div className="flex lg:flex-row flex-col-reverse items-center lg:px-24 w-full px-6 lg:gap-20">

@@ -200,6 +200,7 @@ body {
   display: flex;
   flex-direction: column;
   place-items: center;
+  justify-content: center;
   z-index: 10;
 
   position: relative;
@@ -437,7 +438,7 @@ body {
   }
   .serviceHeroContainer {
     height: 70vh;
-    padding: 72px 0;
+    padding: 72px 24px;
     border-bottom-right-radius: 70px;
     border-bottom-left-radius: 70px;
   }

@@ -1,29 +1,28 @@
-// src/app/sitemap.js
-export default function sitemap() {
-  const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://metageex.com";
-  const now = new Date();
+// app/sitemap.ts
 
-  const urls = [
-    { path: "/", changeFrequency: "weekly", priority: 1.0 },
-    { path: "/apropos", changeFrequency: "monthly", priority: 0.6 },
-    { path: "/contact", changeFrequency: "monthly", priority: 0.5 },
-    { path: "/produits", changeFrequency: "weekly", priority: 0.7 },
-    {
-      path: "/produits/solution-restauration",
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      path: "/produits/solution-archive-numerique",
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
+export default function sitemap() {
+  const base = "https://metageex.com";
+  const now = new Date().toISOString();
+
+  const staticPages = [
+    "", // Accueil
+    "/services",
+    "/services/developpement-application-web",
+    "/services/developpement-application-mobile",
+    "/services/site-vitrine",
+    "/produits",
+    "/apropos",
+    "/contact",
+    "/portfolio",
+    // produits détaillés
+    "/produits/solution-restauration",
+    "/produits/solution-archive-numerique",
   ];
 
-  return urls.map(({ path, changeFrequency, priority }) => ({
-    url: `${base}${path}`,
+  return staticPages.map((p) => ({
+    url: `${base}${p}`,
     lastModified: now,
-    changeFrequency,
-    priority,
+    changeFrequency: "weekly",
+    priority: p === "" ? 1 : 0.7,
   }));
 }
