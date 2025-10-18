@@ -124,7 +124,7 @@ const NavHeader = () => {
               </li>
               <li>
                 <Link
-                  href="/services/developpement-site-vitrine"
+                  href="/services/site-vitrine"
                   onClick={() => setShowNavBar(false)}
                   className="block px-1 py-1 text-white/70 hover:text-pr"
                 >
