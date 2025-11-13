@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import Slider from "./Slider";
 import westmount from "../../../public/images/westmount.png";
@@ -7,6 +8,8 @@ import digivault from "../../../public/images/digivault.png";
 import restau1 from "../../../public/images/restau1.png";
 import syrma from "../../../public/images/syrma.png";
 import wanderwave from "../../../public/images/wanderwave.png";
+import { defaultLocale } from "@/lib/i18n";
+import { getLocalizedRoute } from "@/lib/localePath";
 const slides = [
   { id: 1, image: westmount },
   { id: 2, image: digivault },
@@ -15,7 +18,12 @@ const slides = [
   { id: 5, image: wanderwave },
 ];
 
-const PortfolioSlider = () => {
+const labels = {
+  en: "See more projects",
+  fr: "Voir plus de projets",
+};
+
+const PortfolioSlider = ({ locale = defaultLocale }) => {
   const [current, setCurrent] = useState(0);
 
   const nextSlide = () => {
@@ -44,9 +52,12 @@ const PortfolioSlider = () => {
         </button>
       </div>
       <div className="w-full mt-24 flex justify-center">
-        <button className="gradient-stroke-box">
-          <p>Voir plus</p>
-        </button>
+        <Link
+          href={getLocalizedRoute(locale, "portfolio")}
+          className="gradient-stroke-box"
+        >
+          <p>{labels[locale] || labels[defaultLocale]}</p>
+        </Link>
       </div>
     </div>
   );

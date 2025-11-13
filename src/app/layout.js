@@ -1,9 +1,16 @@
 // src/app/layout.js
+import { cookies } from "next/headers";
 import { Inter, Sarabun } from "next/font/google";
 import "./globals.css";
-import NavHeader from "../components/NavHeader";
-import Footer from "../components/Footer";
-import SeoJsonLd from "../components/SeoJsonLd";
+import { defaultLocale, locales } from "@/lib/i18n";
+import {
+  getLanguageAlternates,
+  getLocalizedRoute,
+  siteUrl,
+} from "@/lib/localePath";
+import NavHeader from "@/components/NavHeader";
+import Footer from "@/components/Footer";
+import SeoJsonLd from "@/components/SeoJsonLd";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,65 +24,56 @@ const sarabun = Sarabun({
   display: "swap",
 });
 
-const base = new URL("https://metageex.com");
+const defaultDescription =
+  "Metageex is a global agency crafting custom websites, SaaS products and mobile applications for ambitious teams.";
+const homeAlternates = getLanguageAlternates("home");
 
 export const metadata = {
-  metadataBase: base,
+  metadataBase: new URL(siteUrl),
   title: {
-    default:
-      "Metageex — Agence de développement web, mobile & SaaS | International",
+    default: "Metageex — Web, SaaS & mobile development agency",
     template: "%s | Metageex",
   },
-  description:
-    "Agence internationale de développement informatique : applications web & mobiles, SaaS, sites vitrines et e-commerce. Nous accompagnons startups et PME.",
-  keywords: [
-    "agence de développement informatique",
-    "développement web",
-    "développement mobile",
-    "site vitrine",
-    "SaaS",
-    "agence web",
-    "Tunisie",
-    "France",
-    "international",
-  ],
+  description: defaultDescription,
   alternates: {
-    canonical: "/",
-    languages: {
-      // si tu ajoutes l'anglais plus tard :
-      fr: "/",
-      en: "/en",
-    },
+    canonical: getLocalizedRoute("en", "home"),
+    languages: homeAlternates,
   },
   openGraph: {
-    type: "website",
-    url: "/",
-    title:
-      "Metageex — Agence de développement web, mobile & SaaS | International",
-    description:
-      "Custom web & mobile apps, SaaS, corporate websites. International agency.",
+    title: "Metageex — Web, SaaS & mobile development agency",
+    description: defaultDescription,
+    url: siteUrl,
     siteName: "Metageex",
-    images: [{ url: "/opengraph-image.png" }], // ou l'OG générée
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Metageex — Agence de développement web, mobile & SaaS | International",
-    description:
-      "Agence internationale : web, mobile, SaaS, sites vitrines & e-commerce.",
+    title: "Metageex — Web, SaaS & mobile development agency",
+    description: defaultDescription,
     images: ["/opengraph-image.png"],
   },
+  icons: {
+    icon: "/icon.ico",
+    shortcut: "/icon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/manifest.json",
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true },
   },
-  verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION },
 };
 
 export default function RootLayout({ children }) {
+  const cookieLocale = cookies().get("NEXT_LOCALE")?.value;
+  const lang = cookieLocale && locales.includes(cookieLocale)
+    ? cookieLocale
+    : defaultLocale;
+
   return (
-    <html lang="fr">
+    <html lang={lang}>
       <body className={`${inter.variable} ${sarabun.variable} main`}>
         <SeoJsonLd />
         <div className="bgImage" />

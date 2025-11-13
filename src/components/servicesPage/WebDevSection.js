@@ -1,7 +1,17 @@
 import Image from "next/image";
 import React from "react";
-import servicesWebDev from "../../../public/images/servicesWebDev.svg";
-const WebDevSection = () => {
+import servicesWebDev from "@public/images/servicesWebDev.svg";
+import Link from "next/link";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { servicesPageContent } from "@/content/services";
+import { defaultLocale } from "@/lib/i18n";
+import { getLocalizedRoute } from "@/lib/localePath";
+
+const WebDevSection = ({ locale = defaultLocale }) => {
+  const section = servicesPageContent.sections.web;
+  const copy = section[locale] || section.en;
+  const href = getLocalizedRoute(locale, section.routeKey || "servicesWeb");
+
   return (
     <section className="w-full  relative mt-12 lg:mt-24 ">
       <div className="serviceBlueHalfElipse" />
@@ -9,22 +19,21 @@ const WebDevSection = () => {
         <div className="flex lg:flex-row flex-col-reverse items-center lg:px-24 w-full px-6 lg:gap-20">
           <div className="lg:w-3/5 w-full">
             <h2 className="font-inter text-white font-semibold lg:text-4xl text-xl text-center lg:text-left mt-4 lg:mt-0">
-              Développement d&apos;applications web
+              {copy.title}
               <div className="mobileTitleUnderLine" />
             </h2>
             <div className="h-1 w-3/5 mt-2 bg-gradient-to-r from-[#57B3FE] to-[rgba(9,148,248,0)]  hidden lg:block " />
 
             <p className="text-white opacity-60 font-inter lg:text-xl text-base font-light leading-normal mt-8 text-center lg:text-left">
-              Nous créons des applications web sur mesure qui répondent
-              précisément aux besoins de votre entreprise. Nos solutions sont
-              conçues pour être robustes, évolutives et sécurisées, garantissant
-              une expérience utilisateur fluide et performante. Que vous ayez
-              besoin d&apos;une plateforme de gestion interne, d&apos;un portail
-              client ou d&apos;une application web complexe, notre équipe
-              d&apos;experts en développement web utilise les dernières
-              technologies et les meilleures pratiques pour vous offrir des
-              solutions innovantes et adaptées à vos exigences.
+              {copy.body}
             </p>
+            <Link
+              href={href}
+              className="inline-flex items-center gap-5 lg:py-4 py-2 px-6 rounded-lg bg-gradient-to-r from-pr to-pr-dark-opaque text-white lg:mt-12 mt-8"
+            >
+              <p>{copy.linkLabel}</p>
+              <FaArrowRightLong />
+            </Link>
           </div>
           <Image
             src={servicesWebDev}

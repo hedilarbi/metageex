@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import MobileSlider from "./MobileSlider";
@@ -8,6 +9,8 @@ import digivault from "../../../public/images/digivault.png";
 import restau1 from "../../../public/images/restau1.png";
 import syrma from "../../../public/images/syrma.png";
 import wanderwave from "../../../public/images/wanderwave.png";
+import { defaultLocale } from "@/lib/i18n";
+import { getLocalizedRoute } from "@/lib/localePath";
 const slides = [
   { id: 1, image: westmount },
   { id: 2, image: digivault },
@@ -15,7 +18,13 @@ const slides = [
   { id: 4, image: syrma },
   { id: 5, image: wanderwave },
 ];
-const MobilePortfolioSlider = () => {
+
+const labels = {
+  en: "See more projects",
+  fr: "Voir plus de projets",
+};
+
+const MobilePortfolioSlider = ({ locale = defaultLocale }) => {
   const [current, setCurrent] = useState(0);
 
   const nextSlide = () => {
@@ -44,11 +53,14 @@ const MobilePortfolioSlider = () => {
           <IoChevronForward size={16} />
         </button>
       </div>
-      {/* <div className="w-full lg:mt-24 mt-10 flex justify-center">
-        <button className="gradient-stroke-box">
-          <p>Voir plus</p>
-        </button>
-      </div> */}
+      <div className="w-full lg:mt-24 mt-10 flex justify-center">
+        <Link
+          href={getLocalizedRoute(locale, "portfolio")}
+          className="gradient-stroke-box"
+        >
+          <p>{labels[locale] || labels[defaultLocale]}</p>
+        </Link>
+      </div>
     </div>
   );
 };

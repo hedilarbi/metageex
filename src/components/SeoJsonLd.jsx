@@ -1,11 +1,12 @@
-// app/(components)/SeoJsonLd.tsx
+import { getAbsoluteUrl, siteUrl } from "@/lib/localePath";
+
 export default function SeoJsonLd() {
   const org = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Metageex",
-    url: "https://metageex.com",
-    logo: "https://metageex.com/icons/icon-512.png",
+    url: siteUrl,
+    logo: getAbsoluteUrl("/icons/icon-512.png"),
     sameAs: [
       // ajoute LinkedIn, X, GitHub si dispo
     ],
@@ -39,10 +40,10 @@ export default function SeoJsonLd() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Metageex",
-    url: "https://metageex.com",
+    url: siteUrl,
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://metageex.com/recherche?q={search_term_string}",
+      target: `${siteUrl}/recherche?q={search_term_string}`,
       "query-input": "required name=search_term_string",
     },
   };

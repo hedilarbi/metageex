@@ -3,8 +3,29 @@
 import Link from "next/link";
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { defaultLocale } from "@/lib/i18n";
+import { getLocalizedRoute } from "@/lib/localePath";
 
-const VitrineHeroSection = () => {
+const heroCopy = {
+  en: {
+    title: "Showcase website creation",
+    description:
+      "Fast, elegant and SEO-friendly websites to present your business and convert visitors.",
+    primary: "Get a quote",
+    secondary: "See examples",
+  },
+  fr: {
+    title: "Création de sites vitrines",
+    description:
+      "Un site rapide, clair et optimisé SEO pour présenter votre activité et générer des prospects.",
+    primary: "Obtenir un devis",
+    secondary: "Voir des exemples",
+  },
+};
+
+const VitrineHeroSection = ({ locale = defaultLocale }) => {
+  const copy = heroCopy[locale] || heroCopy[defaultLocale];
+
   return (
     <section className="w-full lg:h-screen relative mt-32 lg:mt-0">
       <div className="top-half-elipse" />
@@ -13,26 +34,28 @@ const VitrineHeroSection = () => {
         <div className="serviceHeroContainer">
           <div className="relative">
             <h1 className="font-inter font-semibold lg:text-6xl text-2xl text-white text-center">
-              Création de Sites Vitrines
+              {copy.title}
             </h1>
             <div className="shadowCircle" />
           </div>
 
           <p className="lg:w-2/3 text-white font-inter lg:text-2xl text-sm text-opacity-60 font-light text-center leading-loose tracking-wide px-6 mt-8 lg:mt-12">
-            Un site rapide, clair et beau — optimisé SEO, sécurisé et responsive
-            — pour présenter votre activité et générer des prospects.
+            {copy.description}
           </p>
 
-          <div className="mt-8 flex space-x-5 text-xs lg:text-base">
+          <div className="mt-8 flex space-x-5 text-xs lg:text-base z-30">
             <Link
-              href="/contact"
+              href={getLocalizedRoute(locale, "contact")}
               className="flex justify-center lg:gap-5 gap-2 items-center py-2 lg:py-3 lg:px-6 px-2 rounded-lg bg-gradient-to-r from-pr to-pr-dark-opaque text-white"
             >
-              <span>Obtenir un devis</span>
+              <span>{copy.primary}</span>
               <FaArrowRightLong />
             </Link>
-            <Link href="/portfolio/#vitrine" className="gradient-stroke-box">
-              <span>Voir des exemples</span>
+            <Link
+              href={`${getLocalizedRoute(locale, "portfolio")}#vitrine`}
+              className="gradient-stroke-box"
+            >
+              <span>{copy.secondary}</span>
             </Link>
           </div>
         </div>

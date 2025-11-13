@@ -3,8 +3,27 @@
 import Link from "next/link";
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { defaultLocale } from "@/lib/i18n";
+import { getLocalizedRoute } from "@/lib/localePath";
 
-const PortfolioHero = () => {
+const heroCopy = {
+  en: {
+    title: "Portfolio",
+    description:
+      "Web & mobile applications, back-offices, showcase websites and e-commerce. Here’s a selection of shipped projects.",
+    cta: "Discuss a project",
+  },
+  fr: {
+    title: "Portfolio",
+    description:
+      "Applications web & mobiles, backoffices, sites vitrines et e-commerce. Voici une sélection de projets livrés.",
+    cta: "Discuter d’un projet",
+  },
+};
+
+const PortfolioHero = ({ locale = defaultLocale }) => {
+  const copy = heroCopy[locale] || heroCopy.en;
+
   return (
     <section className="w-full lg:h-[70vh] h-[50vh] relative mt-20 lg:mt-32 ">
       <div className="top-half-elipse" />
@@ -12,20 +31,19 @@ const PortfolioHero = () => {
         <div className="serviceHeroContainer">
           <div className="relative">
             <h1 className="font-inter font-semibold lg:text-6xl text-2xl text-white text-center">
-              Portfolio
+              {copy.title}
             </h1>
             <div className="shadowCircle" />
           </div>
           <p className="lg:w-2/3 text-white font-inter lg:text-2xl text-sm text-opacity-60 font-light text-center leading-loose tracking-wide px-6 mt-8 lg:mt-12">
-            Applications web & mobiles, backoffices, sites vitrines et
-            e-commerce. Voici une sélection de projets livrés.
+            {copy.description}
           </p>
-          <div className="mt-8 flex space-x-5 text-xs lg:text-base">
+          <div className="mt-8 flex space-x-5 text-xs lg:text-base z-30">
             <Link
-              href="/contact"
+              href={getLocalizedRoute(locale, "contact")}
               className="flex justify-center lg:gap-5 gap-2 items-center py-2 lg:py-3 lg:px-6 px-2 rounded-lg bg-gradient-to-r from-pr to-pr-dark-opaque text-white"
             >
-              <span>Discuter d’un projet</span>
+              <span>{copy.cta}</span>
               <FaArrowRightLong />
             </Link>
           </div>

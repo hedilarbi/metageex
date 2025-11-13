@@ -1,7 +1,7 @@
-// app/robots.ts
+import { siteUrl } from "@/lib/localePath";
 
 export default function robots() {
-  const base = "https://metageex.com";
+  const host = new URL(siteUrl).host;
   return {
     rules: [
       {
@@ -11,7 +11,7 @@ export default function robots() {
         disallow: ["/api/", "/_next/", "/private/", "/admin/"],
       },
     ],
-    sitemap: `${base}/sitemap.xml`,
-    host: "metageex.com",
+    sitemap: `${siteUrl}/sitemap.xml`,
+    host,
   };
 }

@@ -1,24 +1,9 @@
-import AboutSection from "../components/homePage/AboutSection";
-import ContactSection from "../components/homePage/ContactSection";
-import HeroSection from "../components/homePage/HeroSection";
+import HomePage, { generateMetadata as generateLocalizedMetadata } from "./[locale]/page";
 
-import ServicesSection from "../components/homePage/ServicesSection";
-// src/app/page.js
-export const metadata = {
-  title: "Global web, SaaS & mobile development agency",
-  description:
-    "Custom websites, web apps, SaaS and mobile apps. We partner with startups and SMEs worldwide.",
-  alternates: { canonical: "/" },
-};
+export function generateMetadata() {
+  return generateLocalizedMetadata({ params: { locale: "en" } });
+}
 
-export default function Home() {
-  return (
-    <main className=" overflow-hidden w-screen h-full ">
-      <HeroSection />
-      <ServicesSection />
-
-      <AboutSection />
-      <ContactSection />
-    </main>
-  );
+export default function RootPage() {
+  return <HomePage params={{ locale: "en" }} />;
 }

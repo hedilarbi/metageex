@@ -16,24 +16,56 @@ import {
   SiSupabase,
 } from "react-icons/si";
 import styles from "./FeatureCard.module.css";
-const Technologies = () => {
+import { defaultLocale } from "@/lib/i18n";
+
+const headings = {
+  en: {
+    title: "Technologies & tools",
+    subtitle:
+      "We rely on proven, modern stacks to guarantee performance, scalability and maintainability.",
+    columns: {
+      cms: "CMS",
+      frontend: "Frontend",
+      backend: "Backend",
+      databases: "Databases",
+      cloud: "Cloud & DevOps",
+    },
+  },
+  fr: {
+    title: "Technologies & outils",
+    subtitle:
+      "Nous utilisons des technologies modernes et éprouvées pour garantir des applications performantes et évolutives.",
+    columns: {
+      cms: "CMS",
+      frontend: "Frontend",
+      backend: "Backend",
+      databases: "Bases de données",
+      cloud: "Cloud & DevOps",
+    },
+  },
+};
+
+const Technologies = ({ locale = defaultLocale }) => {
+  const copy = headings[locale] || headings[defaultLocale];
+
   return (
     <section id="technologies" className="md:pb-20 pb-10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="w-full text-center flex flex-col items-center mb-16">
           <h2 className="font-inter text-white font-semibold lg:text-4xl text-center text-xl">
-            Technologies &amp; Outils
+            {copy.title}
             <div className="titleUnderline" />
           </h2>
           <p className="font-inter font-normal text-white text-opacity-60  mt-8 leading-relaxed lg:text-2xl text-base">
-            Nous utilisons les technologies les plus récentes et éprouvées pour
-            garantir des applications performantes et évolutives
+            {copy.subtitle}
           </p>
         </div>
 
         <div className="grid md:grid-cols-5 gap-8 mb-16 text-white">
           <div className="text-center">
-            <h3 className="text-xl font-bold text-white mb-6">CMS</h3>
+            <h3 className="text-xl font-bold text-white mb-6">
+              {copy.columns.cms}
+            </h3>
             <div className="space-y-4">
               <div className={styles.container}>
                 <div className="text-blue-500 mb-2 text-center text-4xl flex justify-center">
@@ -51,7 +83,9 @@ const Technologies = () => {
             </div>
           </div>
           <div className="text-center">
-            <h3 className="text-xl font-bold text-white mb-6">Frontend</h3>
+            <h3 className="text-xl font-bold text-white mb-6">
+              {copy.columns.frontend}
+            </h3>
             <div className="space-y-4">
               <div className={styles.container}>
                 <div className="text-blue-500 mb-2 text-center text-4xl flex justify-center">
@@ -70,7 +104,9 @@ const Technologies = () => {
           </div>
 
           <div className="text-center">
-            <h3 className="text-xl font-bold text-white mb-6">Backend</h3>
+            <h3 className="text-xl font-bold text-white mb-6">
+              {copy.columns.backend}
+            </h3>
             <div className="space-y-4">
               <div className={styles.container}>
                 <div className="text-4xl text-green-600 mb-2 flex justify-center">
@@ -94,7 +130,9 @@ const Technologies = () => {
           </div>
 
           <div className="text-center">
-            <h3 className="text-xl font-bold text-white mb-6">Databases</h3>
+            <h3 className="text-xl font-bold text-white mb-6">
+              {copy.columns.databases}
+            </h3>
             <div className="space-y-4">
               <div className={styles.container}>
                 <div className="text-4xl text-green-600 mb-2 flex justify-center">
@@ -119,7 +157,7 @@ const Technologies = () => {
 
           <div className="text-center">
             <h3 className="text-xl font-bold text-white mb-6">
-              Cloud &amp; DevOps
+              {copy.columns.cloud}
             </h3>
             <div className="space-y-4">
               <div className={styles.container}>

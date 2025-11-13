@@ -1,26 +1,33 @@
-// app/sitemap.ts
+import { siteUrl } from "@/lib/localePath";
 
 export default function sitemap() {
-  const base = "https://metageex.com";
   const now = new Date().toISOString();
 
   const staticPages = [
-    "", // Accueil
+    "", // Home
     "/services",
-    "/services/developpement-application-web",
-    "/services/developpement-application-mobile",
-    "/services/site-vitrine",
-    "/produits",
-    "/apropos",
+    "/services/web-application-development",
+    "/services/mobile-application-development",
+    "/services/showcase-website-development",
+    "/products/restaurant-solution",
+    "/products/digital-archive-solution",
+    "/about",
     "/contact",
     "/portfolio",
-    // produits détaillés
-    "/produits/solution-restauration",
-    "/produits/solution-archive-numerique",
+    // French equivalents
+    "/fr/services",
+    "/fr/services/developpement-application-web",
+    "/fr/services/developpement-application-mobile",
+    "/fr/services/site-vitrine",
+    "/fr/produits/solution-restauration",
+    "/fr/produits/solution-archive-numerique",
+    "/fr/apropos",
+    "/fr/contact",
+    "/fr/portfolio",
   ];
 
   return staticPages.map((p) => ({
-    url: `${base}${p}`,
+    url: `${siteUrl}${p}`,
     lastModified: now,
     changeFrequency: "weekly",
     priority: p === "" ? 1 : 0.7,

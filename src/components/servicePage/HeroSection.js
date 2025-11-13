@@ -2,7 +2,14 @@ import Link from "next/link";
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-const HeroSection = ({ title, description }) => {
+const HeroSection = ({
+  title,
+  description,
+  primaryCta,
+  primaryHref = "/contact",
+  secondaryCta,
+  secondaryHref = "/portfolio",
+}) => {
   return (
     <section className="w-full lg:h-[70vh] h-[50vh] relative mt-20 lg:mt-32 ">
       <div className="top-half-elipse" />
@@ -19,17 +26,21 @@ const HeroSection = ({ title, description }) => {
             {description}
           </p>
 
-          <div className="mt-8 flex space-x-5 text-xs lg:text-base">
-            <Link
-              href="/contact"
-              className="flex justify-center lg:gap-5  gap-2   items-center py-2 lg:py-3 lg:px-6 px-2 rounded-lg  text-center  bg-gradient-to-r from-pr to-pr-dark-opaque text-white"
-            >
-              <p>Démarrer un projet</p>
-              <FaArrowRightLong />
-            </Link>
-            <Link href="/contact" className="gradient-stroke-box">
-              <p>Voir Portfolio</p>
-            </Link>
+          <div className="mt-8 flex space-x-5 text-xs lg:text-base z-30">
+            {primaryCta && (
+              <Link
+                href={primaryHref}
+                className="flex justify-center lg:gap-5  gap-2   items-center py-2 lg:py-3 lg:px-6 px-2 rounded-lg  text-center  bg-gradient-to-r from-pr to-pr-dark-opaque text-white"
+              >
+                <p>{primaryCta}</p>
+                <FaArrowRightLong />
+              </Link>
+            )}
+            {secondaryCta && (
+              <Link href={secondaryHref} className="gradient-stroke-box">
+                <p>{secondaryCta}</p>
+              </Link>
+            )}
           </div>
         </div>
       </div>
