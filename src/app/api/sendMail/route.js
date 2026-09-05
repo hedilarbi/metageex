@@ -17,7 +17,7 @@ export async function POST(req) {
     const mailOptions = {
       from: process.env.MAIL_USER,
       to: "hedi.solve@gmail.com",
-      subject: "Mail from metageex.com",
+      subject: "Mail from auxisdigital.com",
 
       html: `
       <h1>Contact form</h1>

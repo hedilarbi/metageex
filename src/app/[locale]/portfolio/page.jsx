@@ -11,12 +11,12 @@ import {
 
 const portfolioMetadata = {
   en: {
-    title: "Portfolio — Web, mobile & e-commerce projects | Metageex",
+    title: "Portfolio — Web, mobile & e-commerce projects | Auxis Digital",
     description:
       "A selection of delivered products: web apps, mobile apps, showcase websites, e-commerce platforms and custom back-offices.",
   },
   fr: {
-    title: "Portfolio — Projets web, mobile, vitrine & e-commerce | Metageex",
+    title: "Portfolio — Projets web, mobile, vitrine & e-commerce | Auxis Digital",
     description:
       "Découvrez nos réalisations : applications web et mobiles, sites vitrines, e-commerce, backoffices et intégrations cloud.",
   },
@@ -65,7 +65,7 @@ function JsonLd({ locale }) {
     ],
     publisher: {
       "@type": "Organization",
-      name: "Metageex",
+      name: "Auxis Digital",
       url: siteUrl,
       logo: getAbsoluteUrl("/icons/icon-512.png"),
     },
@@ -75,7 +75,7 @@ function JsonLd({ locale }) {
     "@context": "https://schema.org",
     "@type": "ItemList",
     itemListOrder: "http://schema.org/ItemListOrderAscending",
-    name: locale === "fr" ? "Réalisations Metageex" : "Metageex portfolio",
+    name: locale === "fr" ? "Réalisations Auxis Digital" : "Auxis Digital portfolio",
   };
 
   return (

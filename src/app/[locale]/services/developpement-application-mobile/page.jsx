@@ -15,7 +15,7 @@ import {
 const metaByLocale = {
   en: {
     title:
-      "Mobile app development — iOS & Android (React Native/Expo) | Metageex",
+      "Mobile app development — iOS & Android (React Native/Expo) | Auxis Digital",
     description:
       "Design and development of high-performance mobile apps for iOS and Android: React Native/Expo, API integrations, payments, notifications, App Store & Play Store deployment.",
     keywords: [
@@ -32,7 +32,7 @@ const metaByLocale = {
   },
   fr: {
     title:
-      "Développement d’applications mobiles — iOS & Android (React Native/Expo) | Metageex",
+      "Développement d’applications mobiles — iOS & Android (React Native/Expo) | Auxis Digital",
     description:
       "Conception et développement d’applications mobiles performantes : React Native/Expo, intégrations API, paiements, notifications, déploiement App Store & Play Store.",
     keywords: [
@@ -67,7 +67,7 @@ export function generateMetadata({ params }) {
       url: absoluteUrl,
       title: meta.title,
       description: meta.description,
-      siteName: "Metageex",
+      siteName: "Auxis Digital",
       images: [{ url: "/opengraph-image.png" }],
     },
     twitter: {
@@ -92,7 +92,7 @@ function JsonLd({ locale }) {
         : "Mobile app development",
     provider: {
       "@type": "Organization",
-      name: "Metageex",
+      name: "Auxis Digital",
       url: siteUrl,
       logo: getAbsoluteUrl("/icons/icon-512.png"),
     },

@@ -4,7 +4,7 @@ export default function SeoJsonLd() {
   const org = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Metageex",
+    name: "Auxis Digital",
     url: siteUrl,
     logo: getAbsoluteUrl("/icons/icon-512.png"),
     sameAs: [
@@ -39,7 +39,7 @@ export default function SeoJsonLd() {
   const website = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Metageex",
+    name: "Auxis Digital",
     url: siteUrl,
     potentialAction: {
       "@type": "SearchAction",

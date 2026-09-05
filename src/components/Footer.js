@@ -26,7 +26,7 @@ const footerCopy = {
       mobile: "Mobile development",
       showcase: "Showcase websites",
     },
-    rights: `© ${year} Metageex. All rights reserved.`,
+    rights: `© ${year} Auxis Digital. All rights reserved.`,
   },
   fr: {
     tagline: "Transformez vos idées en expériences digitales ambitieuses.",
@@ -42,7 +42,7 @@ const footerCopy = {
       mobile: "Développement mobile",
       showcase: "Développement site vitrine",
     },
-    rights: `© ${year} Metageex. Tous droits réservés.`,
+    rights: `© ${year} Auxis Digital. Tous droits réservés.`,
   },
 };
 
@@ -74,7 +74,7 @@ const Footer = () => {
             >
               <Image
                 src={logo}
-                alt="Metageex — logo"
+                alt="Auxis Digital — logo"
                 width={128}
                 height={40}
                 className="h-10 w-auto"
@@ -106,7 +106,7 @@ const Footer = () => {
                 <FaTwitter className="text-white/80" />
               </a> */}
               <a
-                href="https://www.linkedin.com/company/metageex"
+                href="https://www.linkedin.com/company/auxisdigital"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"

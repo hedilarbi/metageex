@@ -14,7 +14,7 @@ import {
 
 const servicesMetadata = {
   en: {
-    title: "Services — Web, mobile & showcase websites | Metageex",
+    title: "Services — Web, mobile & showcase websites | Auxis Digital",
     description:
       "International tech team for web apps, mobile apps, showcase websites and tailored SaaS solutions.",
     faq: [
@@ -33,7 +33,7 @@ const servicesMetadata = {
     ],
   },
   fr: {
-    title: "Services — Développement web, mobile & sites vitrines | Metageex",
+    title: "Services — Développement web, mobile & sites vitrines | Auxis Digital",
     description:
       "Agence internationale : applications web, mobiles, sites vitrines, e-commerce et solutions SaaS sur mesure.",
     faq: [
@@ -114,7 +114,7 @@ function JsonLd({ locale }) {
     ),
     publisher: {
       "@type": "Organization",
-      name: "Metageex",
+      name: "Auxis Digital",
       url: siteUrl,
       logo: getAbsoluteUrl("/icons/icon-512.png"),
     },

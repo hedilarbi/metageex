@@ -15,7 +15,7 @@ import {
 
 const metaByLocale = {
   en: {
-    title: "Web application development — Next.js, React, Node | Metageex",
+    title: "Web application development — Next.js, React, Node | Auxis Digital",
     description:
       "International team specialised in modern web apps: Next.js/React front-ends, Node/Python back-ends, APIs, e-commerce and bespoke back-offices.",
     keywords: [
@@ -29,7 +29,7 @@ const metaByLocale = {
     ],
   },
   fr: {
-    title: "Développement d’applications web — Next.js, React, Node | Metageex",
+    title: "Développement d’applications web — Next.js, React, Node | Auxis Digital",
     description:
       "Agence spécialisée en développement d’applications web modernes : Next.js/React, Node, APIs, e-commerce et backoffice sur mesure.",
     keywords: [
@@ -79,7 +79,7 @@ export function generateMetadata({ params }) {
       url: absoluteUrl,
       title: meta.title,
       description: meta.description,
-      siteName: "Metageex",
+      siteName: "Auxis Digital",
       images: [{ url: "/opengraph-image.png" }],
     },
     twitter: {
@@ -102,7 +102,7 @@ function JsonLd({ locale }) {
     serviceType: "Développement d’applications web",
     provider: {
       "@type": "Organization",
-      name: "Metageex",
+      name: "Auxis Digital",
       url: siteUrl,
       logo: getAbsoluteUrl("/icons/icon-512.png"),
     },

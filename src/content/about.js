@@ -10,11 +10,11 @@ export const aboutContent = {
   description: {
     en: {
       body:
-        "Welcome to Metageex, a development company dedicated to designing modern web and mobile applications. We believe in innovation, quality and excellence. Our mission is to transform ideas into powerful, efficient digital solutions that serve both our clients and their users.",
+        "Welcome to Auxis Digital, a development company dedicated to designing modern web and mobile applications. We believe in innovation, quality and excellence. Our mission is to transform ideas into powerful, efficient digital solutions that serve both our clients and their users.",
     },
     fr: {
       body:
-        "Bienvenue chez Metageex, une entreprise de développement dédiée à la création d'applications web et mobiles. Nous croyons en l'innovation, la qualité et l'excellence. Notre mission est de transformer les idées en solutions digitales puissantes et efficaces au service de nos clients et de leurs utilisateurs.",
+        "Bienvenue chez Auxis Digital, une entreprise de développement dédiée à la création d'applications web et mobiles. Nous croyons en l'innovation, la qualité et l'excellence. Notre mission est de transformer les idées en solutions digitales puissantes et efficaces au service de nos clients et de leurs utilisateurs.",
     },
   },
   values: {

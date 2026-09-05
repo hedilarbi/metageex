@@ -20,7 +20,7 @@ export default function OG() {
           color: "white",
         }}
       >
-        Metageex — Agence Dev Web & Mobile
+        Auxis Digital — Agence Dev Web & Mobile
       </div>
     ),
     size

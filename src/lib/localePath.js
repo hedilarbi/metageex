@@ -1,7 +1,7 @@
 import { defaultLocale, locales } from "./i18n";
 
 export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://metageex.com";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://auxisdigital.com";
 
 export function getLocalePath(locale, path = "/") {
   const safeLocale = locales.includes(locale) ? locale : defaultLocale;

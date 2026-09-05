@@ -12,12 +12,12 @@ import {
 
 const contactMetadata = {
   en: {
-    title: "Contact Metageex — Web, mobile & SaaS experts",
+    title: "Contact Auxis Digital — Web, mobile & SaaS experts",
     description:
       "Share your roadmap and we’ll craft a tailored action plan within 24h. Workshops, audits and delivery teams for web, mobile and SaaS products.",
   },
   fr: {
-    title: "Contact Metageex — Experts web, mobile & SaaS",
+    title: "Contact Auxis Digital — Experts web, mobile & SaaS",
     description:
       "Expliquez-nous vos objectifs et nous bâtissons un plan d'action en moins de 24h. Workshops, audits et équipes dédiées.",
   },
@@ -48,10 +48,10 @@ const contactCopy = {
     channels: [
       {
         title: "Project team",
-        value: "contact@metageex.com",
+        value: "contact@auxisdigital.com",
         description:
           "An expert answers you and prepares a free first audit.",
-        href: "mailto:contact@metageex.com",
+        href: "mailto:contact@auxisdigital.com",
         icon: FiMail,
       },
       {
@@ -65,7 +65,7 @@ const contactCopy = {
         title: "Offices & remote",
         value: "Bizerte · Remote",
         description: "On-site or remote workshops (Google Meet, Teams, Zoom).",
-        href: "https://maps.google.com/?q=Metageex",
+        href: "https://maps.google.com/?q=Auxis Digital",
         icon: FiMapPin,
         external: true,
       },
@@ -125,10 +125,10 @@ const contactCopy = {
     channels: [
       {
         title: "Équipe projets",
-        value: "contact@metageex.com",
+        value: "contact@auxisdigital.com",
         description:
           "Un expert vous répond et prépare un premier audit gratuit.",
-        href: "mailto:contact@metageex.com",
+        href: "mailto:contact@auxisdigital.com",
         icon: FiMail,
       },
       {
@@ -143,7 +143,7 @@ const contactCopy = {
         value: "Bizerte · Remote",
         description:
           "Workshops sur site ou à distance (Google Meet, Teams, Zoom).",
-        href: "https://maps.google.com/?q=Metageex",
+        href: "https://maps.google.com/?q=Auxis Digital",
         icon: FiMapPin,
         external: true,
       },

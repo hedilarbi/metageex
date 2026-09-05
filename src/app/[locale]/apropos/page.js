@@ -13,12 +13,12 @@ import {
 
 const aboutMetadata = {
   en: {
-    title: "About Metageex — Team & philosophy",
+    title: "About Auxis Digital — Team & philosophy",
     description:
       "Our mission, culture and methodology to build tailored web, mobile and SaaS products.",
   },
   fr: {
-    title: "À propos de Metageex — Équipe & philosophie",
+    title: "À propos de Auxis Digital — Équipe & philosophie",
     description:
       "Notre mission, notre culture et notre méthodologie pour concevoir des solutions web, mobiles et SaaS sur mesure.",
   },

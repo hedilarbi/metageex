@@ -15,7 +15,7 @@ import {
 const metaByLocale = {
   en: {
     title:
-      "Showcase website design — WordPress/Next.js, SEO & responsive | Metageex",
+      "Showcase website design — WordPress/Next.js, SEO & responsive | Auxis Digital",
     description:
       "Professional showcase websites with tailored design, on-page SEO, speed optimisation, security and hosting. Delivered on WordPress or Next.js.",
     keywords: [
@@ -29,7 +29,7 @@ const metaByLocale = {
   },
   fr: {
     title:
-      "Création de sites vitrines — WordPress/Next.js, SEO & Responsive | Metageex",
+      "Création de sites vitrines — WordPress/Next.js, SEO & Responsive | Auxis Digital",
     description:
       "Sites vitrines professionnels : design soigné, SEO on-page, vitesse, sécurité et hébergement. Réalisation en WordPress ou Next.js.",
     keywords: [
@@ -61,7 +61,7 @@ export function generateMetadata({ params }) {
       url: absoluteUrl,
       title: meta.title,
       description: meta.description,
-      siteName: "Metageex",
+      siteName: "Auxis Digital",
       images: [{ url: "/opengraph-image.png" }],
     },
     twitter: {
@@ -84,7 +84,7 @@ function JsonLd({ locale }) {
       locale === "fr" ? "Création de site vitrine" : "Showcase website design",
     provider: {
       "@type": "Organization",
-      name: "Metageex",
+      name: "Auxis Digital",
       url: siteUrl,
       logo: getAbsoluteUrl("/icons/icon-512.png"),
     },

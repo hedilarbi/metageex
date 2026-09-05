@@ -1,19 +1,19 @@
 import Image from "next/image";
 import React from "react";
 import hero5 from "@public/images/hero5.svg";
-import metageex from "@public/images/metageex3.png";
+import auxisdigital from "@public/images/auxisdigital3.png";
 import { defaultLocale } from "@/lib/i18n";
 
 const aboutCopy = {
   en: {
     title: "About us",
-    highlight: "At Metageex",
+    highlight: "At Auxis Digital",
     body:
       "we believe digital acceleration is the fastest way to unlock growth. Our mission is to ship modern, reliable products that turn bold visions into tangible experiences. From custom web and mobile apps to SaaS platforms, showcase sites and e-commerce, we tailor every project to your business goals.",
   },
   fr: {
     title: "À propos de nous",
-    highlight: "Chez Metageex",
+    highlight: "Chez Auxis Digital",
     body:
       "nous croyons que la digitalisation est la clé pour propulser les entreprises vers l'avenir. Notre mission est de livrer des solutions modernes et performantes qui transforment les idées en expériences concrètes : applications web et mobiles, SaaS, sites vitrines et e-commerce pensés pour vos objectifs.",
   },
@@ -37,8 +37,8 @@ const AboutSection = ({ locale = defaultLocale }) => {
           </h2>
           <div className="flex font-inter lg:mt-20 mt-10 lg:px-36 px-6 gap-20">
             <Image
-              src={metageex}
-              alt="metageex"
+              src={auxisdigital}
+              alt="auxisdigital"
               className=" hidden lg:block z-30 w-48 h-48 object-contain"
             />
 

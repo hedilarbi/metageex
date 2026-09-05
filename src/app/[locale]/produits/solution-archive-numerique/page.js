@@ -139,12 +139,12 @@ const copy = {
 
 const metaCopy = {
   en: {
-    title: "Digital archive solution — SaaS platform by Metageex",
+    title: "Digital archive solution — SaaS platform by Auxis Digital",
     description:
       "Secure, intuitive archive management platform: ingestion, OCR, search, sharing and monitoring.",
   },
   fr: {
-    title: "Solution d’archive numérique — plateforme SaaS Metageex",
+    title: "Solution d’archive numérique — plateforme SaaS Auxis Digital",
     description:
       "Plateforme sécurisée et intuitive pour stocker, organiser et partager vos archives numériques.",
   },
