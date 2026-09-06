@@ -22,25 +22,33 @@ export const routeSlugs = {
   portfolio: { en: "/portfolio", fr: "/portfolio" },
   about: { en: "/about", fr: "/apropos" },
   contact: { en: "/contact", fr: "/contact" },
-  servicesWeb: {
-    en: "/services/web-application-development",
-    fr: "/services/developpement-application-web",
+  serviceEcommerce: {
+    en: "/services/e-commerce-development",
+    fr: "/services/developpement-ecommerce",
   },
-  servicesMobile: {
-    en: "/services/mobile-application-development",
-    fr: "/services/developpement-application-mobile",
+  serviceCustomWeb: {
+    en: "/services/custom-web-platforms",
+    fr: "/services/plateformes-web-sur-mesure",
   },
-  servicesShowcase: {
-    en: "/services/showcase-website-development",
-    fr: "/services/site-vitrine",
+  serviceMobile: {
+    en: "/services/mobile-applications",
+    fr: "/services/applications-mobiles",
   },
-  productRestaurant: {
-    en: "/products/restaurant-solution",
-    fr: "/produits/solution-restauration",
+  serviceConsulting: {
+    en: "/services/business-growth-consulting",
+    fr: "/services/conseil-croissance-strategie",
   },
-  productArchive: {
-    en: "/products/digital-archive-solution",
-    fr: "/produits/solution-archive-numerique",
+  serviceOptimization: {
+    en: "/services/revenue-conversion-optimization",
+    fr: "/services/optimisation-conversion",
+  },
+  serviceInfrastructure: {
+    en: "/services/infrastructure-cost-optimization",
+    fr: "/services/optimisation-infrastructure",
+  },
+  serviceSupport: {
+    en: "/services/ongoing-technical-support",
+    fr: "/services/support-technique-continu",
   },
 };
 

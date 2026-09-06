@@ -25,7 +25,7 @@ const sarabun = Sarabun({
 });
 
 const defaultDescription =
-  "Auxis Digital is a global agency crafting custom websites, SaaS products and mobile applications for ambitious teams.";
+  "Auxis Digital is a development agency specializing in e-commerce and business growth, combining technology, consulting, and ongoing support.";
 const homeAlternates = getLanguageAlternates("home");
 
 export const metadata = {

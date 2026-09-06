@@ -1,10 +1,11 @@
-import AboutSection from "@/components/homePage/AboutSection";
-import ContactSection from "@/components/homePage/ContactSection";
 import HeroSection from "@/components/homePage/HeroSection";
-import ProductsSection from "@/components/homePage/ProductsSection";
-import PortfolioSection from "@/components/homePage/PortfolioSection";
+import IntroductionSection from "@/components/homePage/IntroductionSection";
 import ServicesSection from "@/components/homePage/ServicesSection";
-import StatsSection from "@/components/homePage/StatsSection";
+import ProcessSection from "@/components/homePage/ProcessSection";
+import PortfolioSection from "@/components/homePage/PortfolioSection";
+import ExpertiseSection from "@/components/homePage/ExpertiseSection";
+import TestimonialSection from "@/components/homePage/TestimonialSection";
+import FinalCtaSection from "@/components/homePage/FinalCtaSection";
 import { defaultLocale } from "@/lib/i18n";
 import {
   getAbsoluteUrl,
@@ -55,14 +56,15 @@ export default function Home({ params }) {
   const locale = params?.locale || defaultLocale;
 
   return (
-    <main className="overflow-hidden w-screen h-full ">
+    <main className="overflow-hidden w-screen h-full bg-[#050A0F]">
       <HeroSection locale={locale} />
+      <IntroductionSection locale={locale} />
       <ServicesSection locale={locale} />
-      <StatsSection locale={locale} />
-      <ProductsSection locale={locale} />
-      {/* <PortfolioSection locale={locale} /> */}
-      <AboutSection locale={locale} />
-      <ContactSection locale={locale} />
+      <ProcessSection locale={locale} />
+      <PortfolioSection locale={locale} />
+      <ExpertiseSection locale={locale} />
+      <TestimonialSection locale={locale} />
+      <FinalCtaSection locale={locale} />
     </main>
   );
 }

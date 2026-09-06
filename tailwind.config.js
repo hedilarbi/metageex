@@ -19,6 +19,10 @@ module.exports = {
       colors: {
         pr: "#6BC1FF",
         "pr-dark-opaque": "rgba(9, 148, 248, 0.6)",
+        navy: {
+          900: "#050A0F",
+          800: "#071019",
+        }
       },
     },
   },

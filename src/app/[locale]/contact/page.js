@@ -48,10 +48,10 @@ const contactCopy = {
     channels: [
       {
         title: "Project team",
-        value: "contact@auxisdigital.com",
+        value: "contact@auxis-digital.com",
         description:
           "An expert answers you and prepares a free first audit.",
-        href: "mailto:contact@auxisdigital.com",
+        href: "mailto:contact@auxis-digital.com",
         icon: FiMail,
       },
       {
@@ -125,10 +125,10 @@ const contactCopy = {
     channels: [
       {
         title: "Équipe projets",
-        value: "contact@auxisdigital.com",
+        value: "contact@auxis-digital.com",
         description:
           "Un expert vous répond et prépare un premier audit gratuit.",
-        href: "mailto:contact@auxisdigital.com",
+        href: "mailto:contact@auxis-digital.com",
         icon: FiMail,
       },
       {
@@ -213,150 +213,140 @@ const ContactPage = ({ params }) => {
   const copy = contactCopy[locale] || contactCopy[defaultLocale];
 
   return (
-    <main className=" w-full h-full relative overflow-hidden pb-24">
-      <section className="w-full lg:h-[70vh] h-[50vh] relative mt-20 lg:mt-32 ">
-        <div className="top-half-elipse" />
+    <main className="min-h-screen bg-[#050A0F] pt-20 pb-24 overflow-hidden relative">
+      {/* Abstract Background */}
+      <div className="absolute inset-0 z-0 flex items-center justify-center opacity-40 pointer-events-none overflow-hidden">
+        <div className="absolute inset-0" style={{
+          backgroundImage: "linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+          maskImage: "radial-gradient(ellipse 70% 70% at 50% 50%, #000 30%, transparent 100%)",
+          WebkitMaskImage: "radial-gradient(ellipse 70% 70% at 50% 50%, #000 30%, transparent 100%)"
+        }} />
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-pr/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-[#0994F8]/10 rounded-full blur-[120px]" />
+      </div>
 
-        <div className=" z-10 w-full h-full">
-          <div className="contactHero">
-            <Image src={contactHero} alt="contactHero" />
-          </div>
-          <div className="serviceHeroContainer">
-            <div className="h-full w-full flex flex-col items-center justify-center">
-              <h1 className="font-inter font-semibold md:text-4xl text-white inline-block text-xl">
-                {copy.heroTitle}
-                <div className="titleUnderline" />
-              </h1>
-            </div>
+      {/* Hero Section */}
+      <section className="relative z-10 w-full flex flex-col items-center justify-center text-center px-6 pt-24 pb-16">
+        <h1 className="font-inter font-bold lg:text-[4.5rem] md:text-6xl text-4xl text-white tracking-tight drop-shadow-2xl">
+          {copy.heroTitle}
+        </h1>
+        <p className="text-white/60 font-inter font-light lg:text-xl text-base max-w-2xl mt-6 leading-relaxed">
+          {copy.heroSubtitle}
+        </p>
+      </section>
+
+      {/* Main Content */}
+      <section className="relative z-20 w-full max-w-7xl mx-auto px-6 grid gap-12 lg:grid-cols-[1.1fr,0.9fr] mt-8">
+        {/* Left Column: Intro & Highlights */}
+        <div className="rounded-3xl border border-white/5 bg-[#08101A] p-10 lg:p-12 shadow-2xl h-fit">
+          <p className="text-sm font-semibold uppercase tracking-widest text-pr mb-4">
+            {copy.eyebrow}
+          </p>
+          <h2 className="text-3xl font-bold text-white mb-6">
+            {copy.heroSubtitle}
+          </h2>
+          <p className="text-white/70 leading-relaxed font-light mb-10">
+            {copy.intro}
+          </p>
+          <ul className="space-y-6">
+            {copy.highlights.map((item, idx) => (
+              <li key={idx} className="flex items-start gap-4">
+                <div className="mt-1 w-8 h-8 rounded-full bg-pr/10 flex items-center justify-center flex-shrink-0 border border-pr/20">
+                  <span className="text-pr text-sm">✓</span>
+                </div>
+                <p className="text-white/80 font-light leading-relaxed">{item}</p>
+              </li>
+            ))}
+          </ul>
+          
+          <div className="mt-12 grid grid-cols-2 gap-6 pt-10 border-t border-white/5">
+            {copy.stats.map((stat, idx) => (
+              <div key={idx} className="rounded-2xl border border-white/5 bg-white/5 p-6 backdrop-blur-sm">
+                <p className="text-4xl font-bold text-white mb-2">{stat.value}</p>
+                <p className="text-xs text-white/60 leading-relaxed uppercase tracking-wide">{stat.label}</p>
+              </div>
+            ))}
           </div>
         </div>
-      </section>
-      <section className="relative w-full px-6 lg:px-24 mt-10">
-        <div className="productBlueLeftElipse" />
-        <div className="relative z-20 mx-auto max-w-6xl grid gap-8 lg:grid-cols-[1.1fr,0.9fr]">
-          <div className="rounded-3xl border border-white/10 bg-white/5 bg-gradient-to-b from-white/5 to-transparent backdrop-blur-lg p-8 lg:p-10">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-pr">
-              {copy.eyebrow}
-            </p>
-            <h2 className="mt-4 text-3xl font-semibold text-white lg:text-4xl">
-              {copy.heroSubtitle}
-            </h2>
-            <p className="mt-4 text-white/70">
-              {copy.intro}
-            </p>
-            <ul className="mt-8 space-y-5">
-              {copy.highlights.map((item) => (
-                <li
-                  key={item}
-                  className="flex items-start gap-4 text-white/80 text-sm lg:text-base"
-                >
-                  <span className="mt-1 inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-2xl border border-pr/30 bg-pr/10 text-sm font-semibold text-pr">
-                    ✓
-                  </span>
-                  <p>{item}</p>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-10 grid gap-6 sm:grid-cols-2">
-              {copy.stats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="rounded-2xl border border-white/10 bg-white/5 p-6 text-white"
-                >
-                  <p className="text-3xl font-semibold">{stat.value}</p>
-                  <p className="mt-1 text-sm text-white/70">{stat.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="grid gap-4">
-            {copy.channels.map((channel) => {
-              const Icon = channel.icon;
-              const cardContent = (
-                <>
-                  <div className="flex items-center gap-4">
-                    <span className="inline-flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-pr to-pr-dark-opaque text-xl text-white">
-                      <Icon />
-                    </span>
-                    <div>
-                      <p className="text-sm uppercase tracking-wide text-white/60">
-                        {channel.title}
-                      </p>
-                      <p className="text-xl font-semibold text-white">
-                        {channel.value}
-                      </p>
-                    </div>
+
+        {/* Right Column: Channels */}
+        <div className="grid gap-6 h-fit">
+          {copy.channels.map((channel, idx) => {
+            const Icon = channel.icon;
+            const content = (
+              <>
+                <div className="flex items-start gap-5">
+                  <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 group-hover:border-pr/50 group-hover:bg-pr/10 transition-colors">
+                    <Icon className="text-2xl text-pr" />
                   </div>
-                  <p className="mt-4 text-sm text-white/70">
-                    {channel.description}
-                  </p>
-                </>
-              );
-
-              return channel.href ? (
-                <a
-                  key={channel.title}
-                  href={channel.href}
-                  target={
-                    channel.external || channel.href.startsWith("http")
-                      ? "_blank"
-                      : undefined
-                  }
-                  rel={
-                    channel.external || channel.href.startsWith("http")
-                      ? "noreferrer"
-                      : undefined
-                  }
-                  className="group rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:border-pr/50 hover:bg-white/10"
-                >
-                  {cardContent}
-                </a>
-              ) : (
-                <div
-                  key={channel.title}
-                  className="rounded-3xl border border-white/10 bg-white/5 p-6"
-                >
-                  {cardContent}
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-widest text-white/50 mb-1">
+                      {channel.title}
+                    </p>
+                    <p className="text-xl font-bold text-white group-hover:text-pr transition-colors">
+                      {channel.value}
+                    </p>
+                    <p className="mt-3 text-sm text-white/60 font-light leading-relaxed">
+                      {channel.description}
+                    </p>
+                  </div>
                 </div>
-              );
-            })}
-          </div>
+              </>
+            );
+
+            return channel.href ? (
+              <a
+                key={idx}
+                href={channel.href}
+                target={channel.external || channel.href.startsWith("http") ? "_blank" : undefined}
+                rel={channel.external || channel.href.startsWith("http") ? "noreferrer" : undefined}
+                className="group block rounded-3xl border border-white/5 bg-[#08101A] p-8 transition-all duration-300 hover:border-pr/30 hover:shadow-[0_0_30px_rgba(107,193,255,0.1)] hover:-translate-y-1"
+              >
+                {content}
+              </a>
+            ) : (
+              <div key={idx} className="group rounded-3xl border border-white/5 bg-[#08101A] p-8">
+                {content}
+              </div>
+            );
+          })}
         </div>
       </section>
-      <section className="w-full  relative  mb-40   ">
-        <div className="productBlueLeftElipse" />
-        <div className="z-20  left-0 top-0 w-full h-full">
-          <div
-            id="contact-form"
-            className="w-full flex flex-col items-center h-full lg:mt-4"
-          >
-            <ContactForm locale={locale} />
-          </div>
+
+      {/* Contact Form Section */}
+      <section className="relative z-20 w-full max-w-7xl mx-auto px-6 mt-32" id="contact-form">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-4">Send us a message</h2>
+          <p className="text-white/60 font-light">We will get back to you within 24 hours.</p>
+        </div>
+        <div className="rounded-3xl border border-white/5 bg-[#08101A] p-8 lg:p-12 shadow-2xl">
+          <ContactForm locale={locale} />
         </div>
       </section>
-      <section className="relative w-full px-6 lg:px-24 -mt-20">
-        <div className="top-half-elipse" />
-        <div className="relative z-20 mx-auto max-w-6xl rounded-3xl border border-white/10 bg-gradient-to-r from-[#0F1B2C] via-[#0E1827] to-[#09111C] p-8 lg:p-12">
-          <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
-            <div className="lg:w-2/5">
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-pr">
+
+      {/* Methodology Section */}
+      <section className="relative z-20 w-full max-w-7xl mx-auto px-6 mt-32">
+        <div className="rounded-3xl border border-white/5 bg-gradient-to-br from-[#08101A] to-[#050A0F] p-10 lg:p-16 shadow-2xl">
+          <div className="flex flex-col lg:flex-row gap-12 lg:items-center">
+            <div className="lg:w-1/3">
+              <p className="text-sm font-semibold uppercase tracking-widest text-pr mb-4">
                 {copy.method.eyebrow}
               </p>
-              <h3 className="mt-3 text-2xl font-semibold text-white lg:text-3xl">
+              <h3 className="text-3xl font-bold text-white mb-6">
                 {copy.method.title}
               </h3>
-              <p className="mt-4 text-white/70">{copy.method.description}</p>
+              <p className="text-white/60 font-light leading-relaxed">
+                {copy.method.description}
+              </p>
             </div>
-            <div className="grid flex-1 gap-4 sm:grid-cols-3">
-              {copy.method.steps.map((step) => (
-                <div
-                  key={step.title}
-                  className="rounded-2xl border border-white/10 bg-white/5 p-4 text-white"
-                >
-                  <p className="text-xs font-semibold uppercase tracking-wide text-pr">
+            <div className="lg:w-2/3 grid sm:grid-cols-3 gap-6">
+              {copy.method.steps.map((step, idx) => (
+                <div key={idx} className="rounded-2xl border border-white/5 bg-white/5 p-6 backdrop-blur-sm hover:border-pr/30 transition-colors">
+                  <p className="text-xs font-bold uppercase tracking-widest text-pr mb-3">
                     {step.title}
                   </p>
-                  <p className="mt-2 text-sm text-white/80">
+                  <p className="text-sm text-white/70 font-light leading-relaxed">
                     {step.description}
                   </p>
                 </div>

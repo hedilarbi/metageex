@@ -10,11 +10,11 @@ export const aboutContent = {
   description: {
     en: {
       body:
-        "Welcome to Auxis Digital, a development company dedicated to designing modern web and mobile applications. We believe in innovation, quality and excellence. Our mission is to transform ideas into powerful, efficient digital solutions that serve both our clients and their users.",
+        "Welcome to Auxis Digital. We are not just a development agency; we are your strategic partner for e-commerce and business growth. We believe that technology should serve a tangible purpose: to drive sales, optimize operations, and scale your business effortlessly. By combining cutting-edge technology, expert consulting, and ongoing technical support, we help ambitious brands increase their revenue while significantly reducing their development and infrastructure costs.",
     },
     fr: {
       body:
-        "Bienvenue chez Auxis Digital, une entreprise de développement dédiée à la création d'applications web et mobiles. Nous croyons en l'innovation, la qualité et l'excellence. Notre mission est de transformer les idées en solutions digitales puissantes et efficaces au service de nos clients et de leurs utilisateurs.",
+        "Bienvenue chez Auxis Digital. Nous sommes bien plus qu'une simple agence de développement ; nous sommes votre partenaire stratégique pour le e-commerce et la croissance de votre entreprise. Nous croyons que la technologie doit avoir un but précis : stimuler les ventes, optimiser les opérations et faire évoluer votre activité sans effort. En alliant technologies de pointe, conseil d'expert et accompagnement technique continu, nous aidons les marques ambitieuses à augmenter leurs revenus tout en réduisant considérablement leurs coûts de développement et d'infrastructure.",
     },
   },
   values: {
@@ -22,24 +22,24 @@ export const aboutContent = {
       title: "Our core values",
       cards: [
         {
-          title: "Innovation",
+          title: "Performance & ROI",
           content:
-            "Staying ahead of technology to deliver cutting-edge digital solutions.",
+            "We design every solution with a clear focus on measurable results, faster loading times, and a high return on investment for your e-commerce.",
         },
         {
-          title: "Quality",
+          title: "Scalability",
           content:
-            "Building products and services that meet the highest standards.",
+            "We build robust, modern architectures that adapt to your growth without generating prohibitive infrastructure costs.",
         },
         {
-          title: "Excellence",
+          title: "Consulting & Strategy",
           content:
-            "Constantly pushing beyond expectations on every single project.",
+            "We don't just write code; we challenge your ideas to provide the best technical and business advice at every stage of the project.",
         },
         {
-          title: "Integrity",
+          title: "Ongoing Support",
           content:
-            "Acting with transparency to build long-term trust with clients and partners.",
+            "Our commitment doesn't end at launch. We provide continuous monitoring, optimization, and dedicated support to ensure long-term success.",
         },
       ],
     },
@@ -47,24 +47,24 @@ export const aboutContent = {
       title: "Nos valeurs fondamentales",
       cards: [
         {
-          title: "Innovation",
+          title: "Performance & R.O.I",
           content:
-            "Rester à la pointe pour fournir des solutions digitales innovantes.",
+            "Nous concevons chaque solution avec un objectif clair : des résultats mesurables, des temps de chargement ultra-rapides et un fort retour sur investissement.",
         },
         {
-          title: "Qualité",
+          title: "Scalabilité",
           content:
-            "Offrir des produits et services répondant aux standards les plus élevés.",
+            "Nous construisons des architectures modernes et robustes capables de soutenir votre croissance sans générer de coûts d'infrastructure prohibitifs.",
         },
         {
-          title: "Excellence",
+          title: "Conseil & Stratégie",
           content:
-            "Dépasser les attentes sur chaque projet grâce à une exigence constante.",
+            "Nous ne nous contentons pas de coder ; nous challengeons vos idées pour vous apporter les meilleurs conseils techniques et commerciaux à chaque étape.",
         },
         {
-          title: "Intégrité",
+          title: "Accompagnement continu",
           content:
-            "Agir avec honnêteté et transparence pour instaurer la confiance.",
+            "Notre engagement ne s'arrête pas au lancement. Nous assurons un suivi continu, des optimisations et un support dédié pour garantir votre succès à long terme.",
         },
       ],
     },
@@ -73,27 +73,27 @@ export const aboutContent = {
     en: {
       title: "What makes us different",
       body:
-        "Unlike traditional agencies, we focus on a tailored approach and relentless client satisfaction. We don’t just ship generic apps—we build custom solutions that map to your exact business needs. Our experts collaborate with you at every milestone to make sure the final product is exactly what you expected, if not more.",
+        "Unlike traditional agencies that deliver a product and move on, we act as an extension of your team. Our unique strength lies in our dual expertise: deep technical mastery of modern frameworks combined with a sharp understanding of e-commerce business mechanics. We refuse generic solutions. Instead, we architect bespoke digital platforms that seamlessly integrate with your existing workflows, automate your processes, and provide a flawless user experience designed to maximize conversions.",
     },
     fr: {
       title: "Ce qui nous distingue",
       body:
-        "Contrairement aux agences classiques, nous misons sur l'approche sur-mesure et la satisfaction client. Nous ne livrons pas de solutions génériques : nous construisons des applications pensées pour vos besoins métiers. Nos experts avancent avec vous à chaque jalon afin que le produit final dépasse vos attentes.",
+        "Contrairement aux agences traditionnelles qui livrent un produit et disparaissent, nous agissons comme une véritable extension de votre équipe. Notre force réside dans notre double expertise : une maîtrise technique approfondie des frameworks modernes alliée à une compréhension pointue des mécaniques business du e-commerce. Nous refusons les solutions génériques. À la place, nous concevons des plateformes sur-mesure qui s'intègrent parfaitement à vos flux de travail, automatisent vos processus et offrent une expérience utilisateur irréprochable, pensée pour maximiser vos conversions.",
     },
   },
   proposition: {
     en: {
       title: "Value proposition",
       paragraphs: [
-        "We bring integrated, innovative tech solutions that adapt to each client’s reality. Our holistic approach helps us understand your challenges, optimize your operations and reinforce your market positioning.",
-        "We are passionate about what we do and committed to shipping technology that elevates your business. Let’s work together to build the next wave of innovations.",
+        "At Auxis Digital, we provide fully integrated tech solutions tailored to the reality of scaling businesses. Our holistic approach allows us to dive deep into your specific operational challenges. Whether it's replatforming a complex e-commerce store, building a custom SaaS, or migrating to a more cost-effective cloud infrastructure, we engineer solutions that reinforce your competitive advantage.",
+        "We are passionately committed to shipping high-performing technology that actively elevates your business. Let’s collaborate to build reliable, high-speed digital products that not only delight your users but also drive sustainable, long-term growth.",
       ],
     },
     fr: {
       title: "Proposition de valeur",
       paragraphs: [
-        "Nous apportons des solutions technologiques intégrées et innovantes, adaptées à chaque client. Notre approche holistique nous permet de comprendre vos défis, d'optimiser vos opérations et de renforcer votre positionnement sur le marché.",
-        "Nous sommes passionnés par ce que nous faisons et déterminés à propulser votre entreprise vers de nouveaux sommets. Collaborons pour créer les innovations qui feront la différence.",
+        "Chez Auxis Digital, nous fournissons des solutions technologiques intégrées et adaptées à la réalité des entreprises en pleine croissance. Notre approche holistique nous permet de plonger au cœur de vos défis opérationnels. Qu'il s'agisse de refondre une boutique e-commerce complexe, de créer un SaaS sur-mesure ou de migrer vers une infrastructure cloud plus rentable, nous concevons des outils qui renforcent votre avantage concurrentiel.",
+        "Nous sommes passionnément déterminés à livrer des technologies performantes qui propulsent concrètement votre entreprise. Collaborons ensemble pour bâtir des produits digitaux fiables et ultra-rapides, qui non seulement séduiront vos utilisateurs, mais assureront également une croissance pérenne et durable.",
       ],
     },
   },

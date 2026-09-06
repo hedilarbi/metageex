@@ -6,6 +6,8 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { servicesPageContent } from "@/content/services";
 import { defaultLocale } from "@/lib/i18n";
 import { getLocalizedRoute } from "@/lib/localePath";
+import { FadeIn } from "../animations/FadeIn";
+import { Parallax } from "../animations/Parallax";
 
 const WebDevSection = ({ locale = defaultLocale }) => {
   const section = servicesPageContent.sections.web;
@@ -17,7 +19,7 @@ const WebDevSection = ({ locale = defaultLocale }) => {
       <div className="serviceBlueHalfElipse" />
       <div className=" z-20 w-full h-full flex flex-col items-center">
         <div className="flex lg:flex-row flex-col-reverse items-center lg:px-24 w-full px-6 lg:gap-20">
-          <div className="lg:w-3/5 w-full">
+          <FadeIn direction="right" className="lg:w-3/5 w-full">
             <h2 className="font-inter text-white font-semibold lg:text-4xl text-xl text-center lg:text-left mt-4 lg:mt-0">
               {copy.title}
               <div className="mobileTitleUnderLine" />
@@ -29,17 +31,19 @@ const WebDevSection = ({ locale = defaultLocale }) => {
             </p>
             <Link
               href={href}
-              className="inline-flex items-center gap-5 lg:py-4 py-2 px-6 rounded-lg bg-gradient-to-r from-pr to-pr-dark-opaque text-white lg:mt-12 mt-8"
+              className="inline-flex items-center gap-5 lg:py-4 py-2 px-6 rounded-lg bg-gradient-to-r from-pr to-pr-dark-opaque text-white lg:mt-12 mt-8 transition-all hover:scale-105"
             >
               <p>{copy.linkLabel}</p>
               <FaArrowRightLong />
             </Link>
-          </div>
-          <Image
-            src={servicesWebDev}
-            alt="web dev"
-            className="w-40 h-44 lg:flex-1 lg:h-80"
-          />
+          </FadeIn>
+          <Parallax offset={30} className="w-full lg:w-2/5 flex justify-center">
+            <Image
+              src={servicesWebDev}
+              alt="web dev"
+              className="w-40 h-44 lg:w-full lg:h-80 object-contain"
+            />
+          </Parallax>
         </div>
       </div>
     </section>

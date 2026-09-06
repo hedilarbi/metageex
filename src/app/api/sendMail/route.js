@@ -1,9 +1,9 @@
 import nodemailer from "nodemailer";
 export async function POST(req) {
   try {
-    const { name, tel, email, message } = await req.json();
+    const { name, tel, email, subject, message } = await req.json();
     const transporter = nodemailer.createTransport({
-      host: "smtpout.secureserver.net",
+      host: "nitrate.o2switch.net",
       secure: true,
       port: 465,
       auth: {
@@ -17,13 +17,14 @@ export async function POST(req) {
     const mailOptions = {
       from: process.env.MAIL_USER,
       to: "hedi.solve@gmail.com",
-      subject: "Mail from auxisdigital.com",
+      subject: "New Contact Lead from auxis-digital.com",
 
       html: `
       <h1>Contact form</h1>
       <p>name: ${name}!</p>
       <p>Phone: ${tel}</p>
       <p>Email: ${email}</p>
+      <p>Subject: ${subject || 'Not specified'}</p>
       <p>Message: ${message}</p>
     `,
     };

@@ -92,13 +92,16 @@ function JsonLd({ locale }) {
   );
 }
 
+import FinalCtaSection from "@/components/homePage/FinalCtaSection";
+
 export default function PortfolioPage({ params }) {
   const locale = params?.locale || defaultLocale;
   return (
-    <main className="w-full h-full relative overflow-hidden pb-20">
+    <main className="w-full min-h-screen bg-[#050A0F] pt-20">
       <JsonLd locale={locale} />
       <PortfolioHero locale={locale} />
       <PortfolioGrid locale={locale} />
+      <FinalCtaSection locale={locale} />
     </main>
   );
 }

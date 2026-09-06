@@ -6,6 +6,8 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { servicesPageContent } from "@/content/services";
 import { defaultLocale } from "@/lib/i18n";
 import { getLocalizedRoute } from "@/lib/localePath";
+import { FadeIn } from "../animations/FadeIn";
+import { Parallax } from "../animations/Parallax";
 
 const MobileDevSection = ({ locale = defaultLocale }) => {
   const section = servicesPageContent.sections.mobile;
@@ -19,13 +21,15 @@ const MobileDevSection = ({ locale = defaultLocale }) => {
     <section className="w-full  relative  mt-32 ">
       <div className=" z-20 w-full h-full flex flex-col items-center">
         <div className="flex lg:flex-row flex-col items-center lg:px-24 w-full px-6 lg:gap-20">
-          <Image
-            src={servicesMobileDev}
-            alt="web dev"
-            className="w-40 h-44 lg:flex-1 lg:h-80"
-          />
-          <div className="lg:w-3/5 w-full">
-            <h2 className="font-inter text-white font-semibold lg:text-4xl text-xl text-center lg:text-left">
+          <Parallax offset={30} className="w-full lg:w-2/5 flex justify-center">
+            <Image
+              src={servicesMobileDev}
+              alt="mobile dev"
+              className="w-40 h-44 lg:w-full lg:h-80 object-contain"
+            />
+          </Parallax>
+          <FadeIn direction="left" className="lg:w-3/5 w-full">
+            <h2 className="font-inter text-white font-semibold lg:text-4xl text-xl text-center lg:text-left mt-4 lg:mt-0">
               {copy.title}
               <div className="mobileTitleUnderLine" />
             </h2>
@@ -35,12 +39,12 @@ const MobileDevSection = ({ locale = defaultLocale }) => {
             </p>
             <Link
               href={href}
-              className="inline-flex items-center gap-5 lg:py-4 py-2 px-6 rounded-lg bg-gradient-to-r from-pr to-pr-dark-opaque text-white lg:mt-12 mt-8"
+              className="inline-flex items-center gap-5 lg:py-4 py-2 px-6 rounded-lg bg-gradient-to-r from-pr to-pr-dark-opaque text-white lg:mt-12 mt-8 transition-all hover:scale-105"
             >
               <p>{copy.linkLabel}</p>
               <FaArrowRightLong />
             </Link>
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

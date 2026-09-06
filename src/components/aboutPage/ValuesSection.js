@@ -6,6 +6,7 @@ import value3 from "@public/images/value3.svg";
 import value4 from "@public/images/value4.svg";
 import { aboutContent } from "@/content/about";
 import { defaultLocale } from "@/lib/i18n";
+import { FadeIn } from "../animations/FadeIn";
 
 const iconMap = [value1, value2, value3, value4];
 
@@ -16,19 +17,22 @@ const ValuesSection = ({ locale = defaultLocale }) => {
     <section className="w-full lg:mt-48 mt-14 relative ">
       <div className=" z-20 w-full h-full flex flex-col items-center  ">
         <div className="w-full h-full flex flex-col items-center pb-20 lg:px-20 px-10">
-          <h2 className="font-inter text-white font-semibold lg:text-4xl text-xl text-center">
-            {copy.title}
-            <div className="titleUnderline" />
-          </h2>
+          <FadeIn direction="up">
+            <h2 className="font-inter text-white font-semibold lg:text-4xl text-xl text-center">
+              {copy.title}
+              <div className="titleUnderline" />
+            </h2>
+          </FadeIn>
           <div className=" flex w-full gap-10 lg:gap-6 lg:flex-row flex-col  flex-1  lg:justify-between lg:mt-20 mt-10">
             {copy.cards.map((card, index) => (
-              <ValueCard
-                key={card.title}
-                icon={iconMap[index]}
-                title={card.title}
-                content={card.content}
-                reverse={index % 2 === 1}
-              />
+              <FadeIn key={card.title} delay={0.2 * index} direction="up" fullWidth>
+                <ValueCard
+                  icon={iconMap[index]}
+                  title={card.title}
+                  content={card.content}
+                  reverse={index % 2 === 1}
+                />
+              </FadeIn>
             ))}
           </div>
         </div>

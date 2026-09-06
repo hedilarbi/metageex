@@ -19,12 +19,228 @@ import portfolioMob3 from "@public/images/portfolioMob3.png";
 import portfolioMob2 from "@public/images/portfolioMob2.png";
 import portfolioMob1 from "@public/images/portfolioMob1.png";
 import portfolioMob4 from "@public/images/portfolioMob4.png";
+import playsdepotImg from "@public/images/playsdepot.png";
+import aresImg from "@public/images/ares.png";
+import majesticImg from "@public/images/majestic.png";
+import sorelhImg from "@public/images/sorelh.png";
+import secondechanceImg from "@public/images/secondechance.png";
+import hyundaiImg from "@public/images/hyundai.png";
+import baitaImg from "@public/images/baita.png";
+import le1000Img from "@public/images/le1000.png";
+import piccoloImg from "@public/images/piccolo-site.png";
+import dealautoproImg from "@public/images/dealautopro.png";
+import mcImg from "@public/images/MC.png";
+import bsr3rImg from "@public/images/bsr3r.png";
 import { defaultLocale } from "@/lib/i18n";
 import { getLocalizedRoute } from "@/lib/localePath";
 // Exemple images mobiles si tu en as :
 // import portfolioMobile1 from "@/public/images/portfolioMobile1.png";
 
 const DATA = [
+  {
+    id: "playsdepot",
+    image: playsdepotImg,
+    url: "https://www.playsdepot.com",
+    tech: ["Next.js"],
+    categories: ["web", "ecommerce"],
+    translations: {
+      en: {
+        title: "Playsdepot — Game recharge cards",
+        desc: "Online platform for selling game recharge cards.",
+      },
+      fr: {
+        title: "Playsdepot — Cartes de recharge",
+        desc: "Plateforme e-commerce de vente de cartes de recharge de jeux vidéo.",
+      },
+    },
+  },
+  {
+    id: "ares",
+    image: aresImg,
+    url: "https://ares-sportswear.com",
+    tech: ["WordPress"],
+    categories: ["web", "ecommerce"],
+    translations: {
+      en: {
+        title: "Ares — Sportswear & accessories",
+        desc: "Online boutique offering premium sportswear and accessories.",
+      },
+      fr: {
+        title: "Ares — Vêtements & accessoires de sport",
+        desc: "Boutique e-commerce de vêtements et d'accessoires de sport.",
+      },
+    },
+  },
+  {
+    id: "majestic",
+    image: majesticImg,
+    url: "https://majestic-bizerte.tn",
+    tech: ["Next.js"],
+    categories: ["web", "ecommerce"],
+    translations: {
+      en: {
+        title: "Le Majestic — Cinema ticketing",
+        desc: "Online ticketing platform for a cinema with secure payments.",
+      },
+      fr: {
+        title: "Le Majestic — Billetterie de cinéma",
+        desc: "Plateforme e-commerce de réservation et billetterie en ligne pour un cinéma.",
+      },
+    },
+  },
+  {
+    id: "sorelh",
+    image: sorelhImg,
+    url: "https://maison-sorelh.com",
+    tech: ["PrestaShop"],
+    categories: ["web", "ecommerce"],
+    translations: {
+      en: {
+        title: "Maison Sorelh — Furniture store",
+        desc: "Online boutique specialized in furniture and home decor.",
+      },
+      fr: {
+        title: "Maison Sorelh — Vente de meubles",
+        desc: "Boutique e-commerce spécialisée dans la vente de meubles et décoration.",
+      },
+    },
+  },
+  {
+    id: "secondechance",
+    image: secondechanceImg,
+    url: "https://unesecondechance.fr",
+    tech: ["PrestaShop"],
+    categories: ["web", "ecommerce"],
+    translations: {
+      en: {
+        title: "Une Seconde Chance — Furniture store",
+        desc: "E-commerce platform specialized in furniture.",
+      },
+      fr: {
+        title: "Une Seconde Chance — Vente de meubles",
+        desc: "Site e-commerce spécialisé dans la vente de meubles.",
+      },
+    },
+  },
+  {
+    id: "hyundai",
+    image: hyundaiImg,
+    url: "https://hyundai-electronics.fr",
+    tech: ["PrestaShop"],
+    categories: ["web", "ecommerce"],
+    translations: {
+      en: {
+        title: "Hyundai Electronics — Home appliances",
+        desc: "E-commerce platform specialized in home appliances.",
+      },
+      fr: {
+        title: "Hyundai Electronics — Électroménager",
+        desc: "Site e-commerce de vente d'électroménager.",
+      },
+    },
+  },
+  {
+    id: "baita",
+    image: baitaImg,
+    url: "https://www.baita-home.com",
+    tech: ["PrestaShop"],
+    categories: ["web", "ecommerce"],
+    translations: {
+      en: {
+        title: "Baita Home — Furniture store",
+        desc: "Online boutique specialized in furniture sales.",
+      },
+      fr: {
+        title: "Baita Home — Vente de meubles",
+        desc: "Site e-commerce spécialisé dans la vente de meubles.",
+      },
+    },
+  },
+  {
+    id: "le1000",
+    image: le1000Img,
+    url: "https://le1000-one.vercel.app",
+    tech: ["Next.js"],
+    categories: ["web", "vitrine"],
+    translations: {
+      en: {
+        title: "Le 1000 — Resto Bar Relais",
+        desc: "Showcase website for a restaurant and bar (In development).",
+      },
+      fr: {
+        title: "Le 1000 — Resto Bar Relais",
+        desc: "Site vitrine pour un restaurant et bar relais (En cours de développement).",
+      },
+    },
+  },
+  {
+    id: "piccolo",
+    image: piccoloImg,
+    url: "https://piccolo-opal.vercel.app",
+    tech: ["Next.js"],
+    categories: ["web"],
+    translations: {
+      en: {
+        title: "Piccolo Teatro — Cultural art space",
+        desc: "Web application for an art and cultural space (In development).",
+      },
+      fr: {
+        title: "Piccolo Teatro — Espace culturel",
+        desc: "Application web pour un espace culturel et artistique (En cours de développement).",
+      },
+    },
+  },
+  {
+    id: "dealautopro",
+    image: dealautoproImg,
+    url: "https://dat-client.vercel.app/en",
+    tech: ["Next.js"],
+    categories: ["web", "ecommerce"],
+    translations: {
+      en: {
+        title: "DealAutoPro — B2B Car Sales",
+        desc: "B2B e-commerce platform for damaged cars (In development).",
+      },
+      fr: {
+        title: "DealAutoPro — Vente auto B2B",
+        desc: "Plateforme e-commerce B2B de vente de voitures accidentées (En cours de développement).",
+      },
+    },
+  },
+  {
+    id: "muslimconnect",
+    image: mcImg,
+    url: "#",
+    tech: ["Flutter"],
+    categories: ["mobile"],
+    translations: {
+      en: {
+        title: "Muslim Connect — Muslim app",
+        desc: "Mobile application dedicated to the Muslim community.",
+      },
+      fr: {
+        title: "Muslim Connect — Application musulmane",
+        desc: "Application mobile dédiée à la communauté musulmane.",
+      },
+    },
+  },
+  {
+    id: "bsr3r",
+    image: bsr3rImg,
+    url: "https://bsr3r.com",
+    tech: ["Next.js"],
+    categories: ["web", "ecommerce"],
+    translations: {
+      en: {
+        title: "BSR3R — Hockey team ticketing",
+        desc: "Online ticketing and e-commerce platform for a hockey team.",
+      },
+      fr: {
+        title: "BSR3R — Billetterie de hockey",
+        desc: "Plateforme e-commerce et de billetterie en ligne pour une équipe de hockey.",
+      },
+    },
+  },
   {
     id: "courteau",
     image: portfolioWeb1,
@@ -318,7 +534,6 @@ export default function PortfolioGrid({ locale = defaultLocale }) {
   const labels = CATEGORY_LABELS[locale] || CATEGORY_LABELS.en;
   const copy = gridCopy[locale] || gridCopy.en;
 
-  // Lis l’ancre pour activer auto le filtre (#web, #mobile, …)
   useEffect(() => {
     const hash =
       (typeof window !== "undefined" && window.location.hash?.slice(1)) || "";
@@ -333,30 +548,28 @@ export default function PortfolioGrid({ locale = defaultLocale }) {
   }, [active]);
 
   return (
-    <section id="portfolio" className="py-20">
+    <section id="portfolio" className="py-20 bg-[#050A0F]">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Titre */}
-        <div className="w-full text-center flex flex-col items-center mb-10">
-          <h2 className="font-inter text-white font-semibold lg:text-4xl text-center text-xl">
+        <div className="w-full text-center flex flex-col items-center mb-16">
+          <h2 className="font-inter text-white font-bold lg:text-4xl text-3xl text-center tracking-tight">
             {copy.title}
-            <div className="titleUnderline" />
+            <div className="titleUnderline mt-2" />
           </h2>
-          <p className="font-inter font-normal text-white text-opacity-60 mt-6 leading-relaxed lg:text-2xl text-base">
+          <p className="font-inter font-light text-white/60 mt-6 leading-relaxed lg:text-xl text-base max-w-2xl">
             {copy.subtitle}
           </p>
         </div>
 
-        {/* Filtres */}
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-16">
           {FILTERS.map((key) => (
             <button
               key={key}
               onClick={() => setActive(key)}
               className={[
-                "px-4 py-2 rounded-full text-sm font-medium transition border",
+                "px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 border",
                 active === key
-                  ? "bg-pr text-white border-transparent"
-                  : "bg-transparent text-white/70 border-white/20 hover:text-white",
+                  ? "bg-pr text-[#050A0F] border-pr shadow-[0_0_15px_rgba(107,193,255,0.4)]"
+                  : "bg-white/5 text-white/70 border-white/10 hover:text-white hover:border-white/30 hover:bg-white/10",
               ].join(" ")}
             >
               {labels[key]}
@@ -364,73 +577,68 @@ export default function PortfolioGrid({ locale = defaultLocale }) {
           ))}
         </div>
 
-        {/* Grille */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 mb-20">
           {filtered.map((p) => {
             const translation =
               p.translations[locale] || p.translations.fr || p.translations.en;
             return (
-              <article key={p.id} className={styles.container}>
-                <Image
-                  className="w-full h-64 object-cover rounded-2xl"
-                  src={p.image}
-                  alt={translation.title}
-                  width={600}
-                  height={400}
-                  priority={false}
-                />
-                <div className="p-8">
-                  <div className="flex items-center flex-wrap gap-2 mb-4">
+              <article 
+                key={p.id} 
+                className="group flex flex-col bg-[#08101A] border border-white/5 rounded-3xl overflow-hidden transition-all duration-500 hover:border-pr/50 hover:shadow-[0_0_30px_rgba(107,193,255,0.1)] hover:-translate-y-2"
+              >
+                <div className="w-full h-64 overflow-hidden relative">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#08101A] via-transparent to-transparent z-10 opacity-60" />
+                  <Image
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    src={p.image}
+                    alt={translation.title}
+                    width={600}
+                    height={400}
+                    priority={false}
+                  />
+                </div>
+                
+                <div className="p-8 flex flex-col flex-grow relative z-20 -mt-6">
+                  <div className="flex items-center flex-wrap gap-2 mb-5">
                     {p.categories.slice(0, 2).map((cat) => (
                       <span
                         key={cat}
-                        className="bg-pr bg-opacity-10 text-pr px-3 py-1 rounded-full text-sm"
+                        className="bg-pr/10 text-pr border border-pr/20 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider"
                       >
                         {labelFromKey(cat, locale)}
                       </span>
                     ))}
                     {p.tech?.[0] && (
-                      <span className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm">
+                      <span className="bg-white/5 text-white/70 border border-white/10 px-3 py-1 rounded-full text-xs font-medium">
                         {p.tech[0]}
                       </span>
                     )}
                   </div>
 
-                  <h3 className="text-xl font-bold text-white mb-3">
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-pr transition-colors">
                     {translation.title}
                   </h3>
-                  <p className="text-white opacity-60 mb-6">
+                  <p className="text-white/60 font-light text-sm leading-relaxed mb-8 flex-grow">
                     {translation.desc}
                   </p>
 
                   <Link
                     href={p.url || "#"}
                     target={p.url?.startsWith("http") ? "_blank" : undefined}
-                    className="text-pr hover:text-blue-700 font-medium flex items-center gap-2"
+                    className="inline-flex items-center gap-2 text-pr font-medium text-sm hover:text-white transition-colors mt-auto w-fit"
                   >
                     <span>
-                      {locale === "fr" ? "Voir le projet" : "View project"}
+                      {locale === "fr" ? "View Project" : "View project"}
                     </span>
-                    <FaArrowRightLong />
+                    <FaArrowRightLong className="transition-transform group-hover:translate-x-1" />
                   </Link>
                 </div>
               </article>
             );
           })}
         </div>
-
-        {/* CTA */}
-        <div className="text-center">
-          <Link
-            href={getLocalizedRoute(locale, "contact")}
-            className="gradient-bg text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition"
-          >
-            {copy.cta}
-          </Link>
-        </div>
       </div>
 
-      {/* Ancres invisibles pour activer les filtres via URL */}
       <div id="all" className="sr-only" aria-hidden="true" />
       <div id="web" className="sr-only" aria-hidden="true" />
       <div id="mobile" className="sr-only" aria-hidden="true" />

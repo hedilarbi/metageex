@@ -11,8 +11,8 @@ export default function manifest() {
     background_color: "#ffffff",
     theme_color: "#0994F8",
     icons: [
-      { src: "/images/auxisdigital3.png", sizes: "192x192", type: "image/png" },
-      { src: "/images/auxisdigital3.png", sizes: "512x512", type: "image/png" },
+      { src: "/images/symbol.png", sizes: "192x192", type: "image/png" },
+      { src: "/images/symbol.png", sizes: "512x512", type: "image/png" },
     ],
   };
 }
