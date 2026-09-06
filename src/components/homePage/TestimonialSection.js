@@ -89,7 +89,7 @@ const TestimonialSection = ({ locale = defaultLocale }) => {
           <div className="relative">
             {/* Large quotation mark */}
             <div className="absolute -top-12 -left-8 text-8xl font-serif text-white/5 pointer-events-none select-none">
-              "
+              &quot;
             </div>
             
             <div className="relative z-10">

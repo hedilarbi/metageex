@@ -55,7 +55,7 @@ const IntroductionSection = ({ locale = defaultLocale }) => {
             
             <div className="mt-8 p-6 rounded-xl border-l-2 border-pr bg-pr/5 backdrop-blur-sm">
               <p className="text-white text-lg font-medium leading-snug">
-                "{copy.highlight}"
+                &quot;{copy.highlight}&quot;
               </p>
             </div>
 
