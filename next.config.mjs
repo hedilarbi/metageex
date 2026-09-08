@@ -8,6 +8,14 @@ const nextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/presentation',
+        destination: '/presentation/index.html',
+      },
+    ];
+  },
 };
 
 export default nextConfig;
